@@ -16,7 +16,27 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: f34777c3253b8df42bebb76696d09484
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: fce513ca853a9fa41a27d1ae6a09f92b
+    m_Address: EnemyDataTable
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DataTable
+  - m_GUID: 668401c8c523c6a40bcbd8eacecffe53
+    m_Address: WaveDataTable
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DataTable
+  - m_GUID: 2300bb05f3179ad48be1d1269ee1698f
+    m_Address: SpawnDataTable
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DataTable
+  - m_GUID: 80f60be96b5d02a47ad762759730ced7
+    m_Address: StageDataTable
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DataTable
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 810047e11ab25e74c8917d7a7d217414, type: 2}
   m_SchemaSet:

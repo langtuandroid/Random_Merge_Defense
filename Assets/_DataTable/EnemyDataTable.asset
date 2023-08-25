@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 192ad158e2f8f0947b184f6bd5ecb063, type: 3}
+  m_Name: EnemyDataTable
+  m_EditorClassIdentifier: 
+  _enemyDataTable:
+  - enemyId: a
+    moveSpeed: 1
+    rotateSpeed: 1
+    hp: 10
+    hpGrowth: 0.25
+    spawnInterval: 0.5
+    goldAmount: 1
+    lifeDecreaseAmount: 1
+  - enemyId: b
+    moveSpeed: 2
+    rotateSpeed: 2
+    hp: 10
+    hpGrowth: 0.25
+    spawnInterval: 0.1
+    goldAmount: 1
+    lifeDecreaseAmount: 1
+  - enemyId: c
+    moveSpeed: 3
+    rotateSpeed: 3
+    hp: 10
+    hpGrowth: 0.25
+    spawnInterval: 0.2
+    goldAmount: 1
+    lifeDecreaseAmount: 1
+  - enemyId: d
+    moveSpeed: 4
+    rotateSpeed: 4
+    hp: 10
+    hpGrowth: 0.25
+    spawnInterval: 0.2
+    goldAmount: 1
+    lifeDecreaseAmount: 1
+  - enemyId: e
+    moveSpeed: 5
+    rotateSpeed: 5
+    hp: 10
+    hpGrowth: 0.25
+    spawnInterval: 0.2
+    goldAmount: 1
+    lifeDecreaseAmount: 1

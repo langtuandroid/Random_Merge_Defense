@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   googleJson: {fileID: 4900000, guid: ecc209bb8bfc4374d8b2819e031d2543, type: 3}
   dataTableFolderPath: Assets/_DataTable
-  speardSheetId: 1GefkjU-rFmnK1AZYdvqgDGY6uBIoAHd1zeVXRR3RGRg
-  testSpeardSheetId: 1gR_6VctMql6kzpBMD_zpy3aPNVATa4DaRed5OT0zGYM
+  speardSheetId: 1xKLxcSdC6Ef0LV8wcf_ENUaNFDBvmO5TwwRh4G162g4
+  testSpeardSheetId: 1xKLxcSdC6Ef0LV8wcf_ENUaNFDBvmO5TwwRh4G162g4

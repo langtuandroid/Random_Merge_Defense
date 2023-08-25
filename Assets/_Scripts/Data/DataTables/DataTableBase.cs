@@ -10,6 +10,10 @@ using DataTable;
 public class DataTableBase
 {
     DataTableSO[] datatables;
+    public EnemyDataTableSO EnemyDataTable => GetTable<EnemyDataTableSO>();
+    public SpawnDataTableSO SpawnDataTable => GetTable<SpawnDataTableSO>();
+    public StageDataTableSO StageDataTable => GetTable<StageDataTableSO>();
+    public WaveDataTableSO WaveDataTable => GetTable<WaveDataTableSO>();
     public async Task Init()
     {
         AsyncOperationHandle<IList<DataTableSO>> handle = Addressables.LoadAssetsAsync<DataTableSO>("DataTable", null);

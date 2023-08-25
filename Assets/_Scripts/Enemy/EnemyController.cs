@@ -5,12 +5,15 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
     EnemyMoveSystem enemyMoveSystem;
+    EnemyDamageReceiver enemyDamageReceiver;
     System.Action lastEnemyInWave;
     public void Initialize(System.Action lastEnemyInWave)
     {
         lastEnemyInWave = this.lastEnemyInWave;
         enemyMoveSystem = GetComponentInChildren<EnemyMoveSystem>();
         enemyMoveSystem.Initialize(PlayerLifeDecrease);
+        enemyDamageReceiver = GetComponentInChildren<EnemyDamageReceiver>();
+        enemyDamageReceiver.Initialize(100, Death);
     }
     void Death()
     {

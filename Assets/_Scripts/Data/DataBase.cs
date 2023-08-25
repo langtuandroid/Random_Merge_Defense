@@ -10,9 +10,10 @@ namespace SaveData
 
         public void Save() => SaveGame.Save("Data", this);
         [SerializeField] public PlayerDataLayer PlayerDataLayer;
+        [SerializeField] public StageDataLayer StageDataLayer;
         public void Initialize()
         {
-
+            StageDataLayer = new StageDataLayer();
             PlayerDataLayer = new PlayerDataLayer();
         }
     }
