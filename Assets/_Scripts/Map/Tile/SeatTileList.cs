@@ -2,17 +2,46 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SeatTileList : MonoBehaviour
+public class SeatTileList : SingletonComponent<SeatTileList>
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] SeatTile[] seatTiles;
+    public void Initialize()
     {
+        List<SeatData> seatData = DataManager.Database.InGameDataLayer.GetData().seatDatas;
+        for (int i = 0; i < seatData.Count; i++)
+        {
+            for (int j = 0; j < seatTiles.Length; j++)
+            {
+                if (seatData[i].seatId == seatTiles[j].SeatId)
+                {
+                    seatTiles[j].FillTower(seatData[i].towerId, seatData[i].abilityId);
+                }
+            }
+        }
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
 
+
+
+
+
+
+
+
+
+
+
+
+
+#if UNITY_EDITOR
+    public void Setting()
+    {
+        seatTiles = GetComponentsInChildren<SeatTile>();
+        for (int i = 0; i < seatTiles.Length; i++)
+        {
+            seatTiles[i].Setting(i);
+        }
     }
+#endif
 }

@@ -1,0 +1,525 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c134d983a85fb04ba528bed815554d3, type: 3}
+  m_Name: TowerAbilityDataTable
+  m_EditorClassIdentifier: 
+  towerAbilityDataTable:
+  - abilityId: 10010
+    attackPower: 20
+    attackDistance: 3
+    criticalRate: 0
+    actCoolDown: 1
+    operationTimes: 1
+    operationInterval: -1
+    objectMultiple: 1
+    objectMultipleAngle: -1
+    penetrationCount: 1
+    values:
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+  - abilityId: 10011
+    attackPower: 50
+    attackDistance: 3
+    criticalRate: 0.1
+    actCoolDown: 1
+    operationTimes: 1
+    operationInterval: -1
+    objectMultiple: 1
+    objectMultipleAngle: -1
+    penetrationCount: 1
+    values:
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+  - abilityId: 10012
+    attackPower: 5
+    attackDistance: 3
+    criticalRate: 0.2
+    actCoolDown: 1
+    operationTimes: 1
+    operationInterval: -1
+    objectMultiple: 1
+    objectMultipleAngle: -1
+    penetrationCount: 1
+    values:
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+  - abilityId: 10013
+    attackPower: 7
+    attackDistance: 3
+    criticalRate: 0.3
+    actCoolDown: 1
+    operationTimes: 1
+    operationInterval: -1
+    objectMultiple: 1
+    objectMultipleAngle: -1
+    penetrationCount: 1
+    values:
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+  - abilityId: 10014
+    attackPower: 9
+    attackDistance: 3
+    criticalRate: 0.4
+    actCoolDown: 1
+    operationTimes: 1
+    operationInterval: -1
+    objectMultiple: 1
+    objectMultipleAngle: -1
+    penetrationCount: 1
+    values:
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+  - abilityId: 10015
+    attackPower: 11
+    attackDistance: 3
+    criticalRate: 0.5
+    actCoolDown: 1
+    operationTimes: 1
+    operationInterval: -1
+    objectMultiple: 1
+    objectMultipleAngle: -1
+    penetrationCount: 1
+    values:
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+  - abilityId: 10020
+    attackPower: 1
+    attackDistance: 3
+    criticalRate: 0
+    actCoolDown: 1.5
+    operationTimes: 1
+    operationInterval: -1
+    objectMultiple: 1
+    objectMultipleAngle: -1
+    penetrationCount: -1
+    values:
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+  - abilityId: 10021
+    attackPower: 2.5
+    attackDistance: 3
+    criticalRate: 0.1
+    actCoolDown: 1.5
+    operationTimes: 1
+    operationInterval: -1
+    objectMultiple: 1
+    objectMultipleAngle: -1
+    penetrationCount: -1
+    values:
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+  - abilityId: 10022
+    attackPower: 4
+    attackDistance: 3
+    criticalRate: 0.2
+    actCoolDown: 1.5
+    operationTimes: 1
+    operationInterval: -1
+    objectMultiple: 2
+    objectMultipleAngle: 45
+    penetrationCount: -1
+    values:
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+  - abilityId: 10023
+    attackPower: 5.5
+    attackDistance: 3
+    criticalRate: 0.3
+    actCoolDown: 1.5
+    operationTimes: 1
+    operationInterval: -1
+    objectMultiple: 2
+    objectMultipleAngle: 45
+    penetrationCount: -1
+    values:
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+  - abilityId: 10024
+    attackPower: 7
+    attackDistance: 3
+    criticalRate: 0.4
+    actCoolDown: 1.5
+    operationTimes: 1
+    operationInterval: -1
+    objectMultiple: 3
+    objectMultipleAngle: 45
+    penetrationCount: -1
+    values:
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+  - abilityId: 10025
+    attackPower: 8.5
+    attackDistance: 3
+    criticalRate: 0.5
+    actCoolDown: 1.5
+    operationTimes: 1
+    operationInterval: -1
+    objectMultiple: 3
+    objectMultipleAngle: 45
+    penetrationCount: -1
+    values:
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+  - abilityId: 10030
+    attackPower: 1
+    attackDistance: 3
+    criticalRate: 0
+    actCoolDown: 2
+    operationTimes: 1
+    operationInterval: -1
+    objectMultiple: 1
+    objectMultipleAngle: -1
+    penetrationCount: -1
+    values:
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+  - abilityId: 10031
+    attackPower: 2.5
+    attackDistance: 3
+    criticalRate: 0.1
+    actCoolDown: 2
+    operationTimes: 1
+    operationInterval: -1
+    objectMultiple: 1
+    objectMultipleAngle: -1
+    penetrationCount: -1
+    values:
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+  - abilityId: 10032
+    attackPower: 4
+    attackDistance: 3
+    criticalRate: 0.2
+    actCoolDown: 2
+    operationTimes: 1
+    operationInterval: -1
+    objectMultiple: 1
+    objectMultipleAngle: -1
+    penetrationCount: -1
+    values:
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+  - abilityId: 10033
+    attackPower: 5.5
+    attackDistance: 3
+    criticalRate: 0.3
+    actCoolDown: 2
+    operationTimes: 1
+    operationInterval: -1
+    objectMultiple: 1
+    objectMultipleAngle: -1
+    penetrationCount: -1
+    values:
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+  - abilityId: 10034
+    attackPower: 7
+    attackDistance: 3
+    criticalRate: 0.4
+    actCoolDown: 2
+    operationTimes: 1
+    operationInterval: -1
+    objectMultiple: 1
+    objectMultipleAngle: -1
+    penetrationCount: -1
+    values:
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+  - abilityId: 10035
+    attackPower: 8.5
+    attackDistance: 3
+    criticalRate: 0.5
+    actCoolDown: 2
+    operationTimes: 1
+    operationInterval: -1
+    objectMultiple: 1
+    objectMultipleAngle: -1
+    penetrationCount: -1
+    values:
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+  - abilityId: 10040
+    attackPower: 1
+    attackDistance: 3
+    criticalRate: 0
+    actCoolDown: 2
+    operationTimes: 1
+    operationInterval: -1
+    objectMultiple: 1
+    objectMultipleAngle: -1
+    penetrationCount: -1
+    values:
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+  - abilityId: 10041
+    attackPower: 2.5
+    attackDistance: 3
+    criticalRate: 0.1
+    actCoolDown: 2
+    operationTimes: 1
+    operationInterval: -1
+    objectMultiple: 1
+    objectMultipleAngle: -1
+    penetrationCount: -1
+    values:
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+  - abilityId: 10042
+    attackPower: 4
+    attackDistance: 3
+    criticalRate: 0.2
+    actCoolDown: 2
+    operationTimes: 1
+    operationInterval: -1
+    objectMultiple: 1
+    objectMultipleAngle: -1
+    penetrationCount: -1
+    values:
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+  - abilityId: 10043
+    attackPower: 5.5
+    attackDistance: 3
+    criticalRate: 0.3
+    actCoolDown: 2
+    operationTimes: 1
+    operationInterval: -1
+    objectMultiple: 1
+    objectMultipleAngle: -1
+    penetrationCount: -1
+    values:
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+  - abilityId: 10044
+    attackPower: 7
+    attackDistance: 3
+    criticalRate: 0.4
+    actCoolDown: 2
+    operationTimes: 1
+    operationInterval: -1
+    objectMultiple: 1
+    objectMultipleAngle: -1
+    penetrationCount: -1
+    values:
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+  - abilityId: 10045
+    attackPower: 8.5
+    attackDistance: 3
+    criticalRate: 0.5
+    actCoolDown: 2
+    operationTimes: 1
+    operationInterval: -1
+    objectMultiple: 1
+    objectMultipleAngle: -1
+    penetrationCount: -1
+    values:
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+  - abilityId: 10050
+    attackPower: 1
+    attackDistance: 3
+    criticalRate: 0
+    actCoolDown: 0.75
+    operationTimes: 1
+    operationInterval: -1
+    objectMultiple: 1
+    objectMultipleAngle: -1
+    penetrationCount: -1
+    values:
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+  - abilityId: 10051
+    attackPower: 3
+    attackDistance: 3
+    criticalRate: 0.1
+    actCoolDown: 0.75
+    operationTimes: 1
+    operationInterval: -1
+    objectMultiple: 1
+    objectMultipleAngle: -1
+    penetrationCount: -1
+    values:
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+  - abilityId: 10052
+    attackPower: 5
+    attackDistance: 3
+    criticalRate: 0.2
+    actCoolDown: 0.75
+    operationTimes: 1
+    operationInterval: -1
+    objectMultiple: 1
+    objectMultipleAngle: -1
+    penetrationCount: -1
+    values:
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+  - abilityId: 10053
+    attackPower: 7
+    attackDistance: 3
+    criticalRate: 0.3
+    actCoolDown: 0.75
+    operationTimes: 1
+    operationInterval: -1
+    objectMultiple: 1
+    objectMultipleAngle: -1
+    penetrationCount: -1
+    values:
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+  - abilityId: 10054
+    attackPower: 9
+    attackDistance: 3
+    criticalRate: 0.4
+    actCoolDown: 0.75
+    operationTimes: 1
+    operationInterval: -1
+    objectMultiple: 1
+    objectMultipleAngle: -1
+    penetrationCount: -1
+    values:
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+  - abilityId: 10055
+    attackPower: 11
+    attackDistance: 3
+    criticalRate: 0.5
+    actCoolDown: 0.75
+    operationTimes: 1
+    operationInterval: -1
+    objectMultiple: 1
+    objectMultipleAngle: -1
+    penetrationCount: -1
+    values:
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1

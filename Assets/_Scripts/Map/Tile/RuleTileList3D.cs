@@ -13,7 +13,8 @@ public class RuleTileList3D : MonoBehaviour
     public void InitializeRuleTileList()
     {
         ruleTileDict = new Dictionary<Vector3, GameObject>();
-        GetComponentInChildren<PathTileList>().Initialize();
+        GetComponentInChildren<PathTileList>().Setting();
+        GetComponentInChildren<SeatTileList>().Setting();
     }
 
     public void CleanTilemapList()
@@ -22,8 +23,13 @@ public class RuleTileList3D : MonoBehaviour
         {
             if (tilemapLevels[i].TryGetComponent(out PathTileList pathTileList))
             {
-                pathTileList.Initialize();
+                pathTileList.Setting();
             }
+            if (tilemapLevels[i].TryGetComponent(out SeatTileList seatTileList))
+            {
+                seatTileList.Setting();
+            }
+
             if (tilemapLevels[i] == null)
             {
                 tilemapLevels.RemoveAt(i);

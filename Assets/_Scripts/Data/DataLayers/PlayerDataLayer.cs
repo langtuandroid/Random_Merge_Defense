@@ -6,14 +6,13 @@ using SaveData;
 [System.Serializable]
 public class PlayerDataLayer : DataLayer
 {
-    // [SerializeField] SaveData.PlayerData _playerData;
-    // public SaveData.PlayerData GetData()
-    // {
-    //     return null;
-    //     // return _playerData;
-    // }
+    [SerializeField] PlayerData _playerData;
+    public PlayerData GetData()
+    {
+        return _playerData;
+    }
     public override void SetData<T>(T value)
     {
-        // _playerData = value as SaveData.PlayerData;
+        _playerData = value as PlayerData;
     }
 }

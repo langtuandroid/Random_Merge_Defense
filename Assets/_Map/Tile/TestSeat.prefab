@@ -9,9 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1167529961210568703}
-  - component: {fileID: 1167529961210568696}
-  m_Layer: 0
-  m_Name: TestGround
+  - component: {fileID: 3017675724066116089}
+  - component: {fileID: 661384978500983659}
+  m_Layer: 6
+  m_Name: TestSeat
   m_TagString: Rule Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -33,7 +34,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1167529961210568696
+--- !u!114 &3017675724066116089
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -42,13 +43,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 1979392495412610373}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0316ac0f9947a2346b16b69aab73adb1, type: 3}
+  m_Script: {fileID: 11500000, guid: 891ccdc230a3cfd448c9130bdbc9f8bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ruleTile: {fileID: 11400000, guid: 221d0724c90a2b4408428ff5d5f4aec7, type: 2}
   ruleTileController: {fileID: 0}
   placeholder: {fileID: 7419114260175256988}
-  neighborTilePositions: 0101010101010101
+  neighborTilePositions: 0000000000000000
+--- !u!65 &661384978500983659
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1979392495412610373}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: -0.5, z: 0}
 --- !u!1 &7419114260175256988
 GameObject:
   m_ObjectHideFlags: 0

@@ -14,6 +14,9 @@ public class DataTableBase
     public WaveSpawnDataTableSO WaveSpawnDataTable => GetTable<WaveSpawnDataTableSO>();
     public StageDataTableSO StageDataTable => GetTable<StageDataTableSO>();
     public WaveDataTableSO WaveDataTable => GetTable<WaveDataTableSO>();
+    public TowerAbilityDataTableSO TowerAbilityDataTable => GetTable<TowerAbilityDataTableSO>();
+    public TowerStatusDataTableSO TowerStatusDataTable => GetTable<TowerStatusDataTableSO>();
+    public InGame_TowerUpgradeDataTableSO InGame_TowerUpgradeDataTable => GetTable<InGame_TowerUpgradeDataTableSO>();
     public async Task Init()
     {
         AsyncOperationHandle<IList<DataTableSO>> handle = Addressables.LoadAssetsAsync<DataTableSO>("DataTable", null);

@@ -6,7 +6,7 @@ public class PathTileList : SingletonComponent<PathTileList>
 {
     [SerializeField] Vector3[] pathPositions;
     public Vector3[] PathPositions => pathPositions;
-    public void Initialize()
+    public void Setting()
     {
         var temtpathTiles = GetComponentsInChildren<PathTile>().Where(x => x.Index >= 0).OrderBy(x => x.Index).ToList();
         PathTile[] pathTiles = temtpathTiles.ToArray();

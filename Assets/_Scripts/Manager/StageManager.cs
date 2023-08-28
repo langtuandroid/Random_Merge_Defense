@@ -18,8 +18,23 @@ public class StageManager : SingletonComponent<StageManager>
             };
             DataManager.Database.StageDataLayer.SetData(stageData);
         }
+
+        var playerData = DataManager.Database.PlayerDataLayer.GetData();
+        if (playerData == null)
+        {
+            playerData = new SaveData.PlayerData();
+            var towerStatusDataTables = DataManager.DataTableBase.TowerStatusDataTable.GetTables();
+            for (int i = 0; i < towerStatusDataTables.Length; i++)
+            {
+                playerData.ownDeckTowerIds.Add(towerStatusDataTables[i].towerId);
+            }
+            DataManager.Database.PlayerDataLayer.SetData(playerData);
+        }
+
+
         waveManager.Initialize(stageData.currentStageId, stageData.currentWaveOrder);
         InGameUI.Instance.Initialize();
+        InGame_TowerUpgradeManager.Instance.Initialize();
     }
     public void Fail()
     {

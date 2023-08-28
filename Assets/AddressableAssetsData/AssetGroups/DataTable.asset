@@ -37,6 +37,21 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - DataTable
+  - m_GUID: 276029b5bd1fff442b520a0810013999
+    m_Address: TowerStatusDataTable
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DataTable
+  - m_GUID: 6a64f655c808dd543ad8f7a479beaf17
+    m_Address: TowerAbilityDataTable
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DataTable
+  - m_GUID: 9fa3b1b411e2a0142b2563de9940b54a
+    m_Address: InGame_TowerUpgradeDataTable
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - DataTable
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 810047e11ab25e74c8917d7a7d217414, type: 2}
   m_SchemaSet:
