@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3965090102438670561}
-  m_Layer: 6
+  m_Layer: 5
   m_Name: Frame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36,7 +36,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 1.5}
+  m_AnchoredPosition: {x: 0, y: 0.6}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &4900536824546608095
@@ -50,7 +50,7 @@ GameObject:
   - component: {fileID: 4900536824546608083}
   - component: {fileID: 4900536824546608082}
   - component: {fileID: 1513842220191895840}
-  m_Layer: 6
+  m_Layer: 5
   m_Name: HPBarCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -123,7 +123,7 @@ GameObject:
   - component: {fileID: 8796539720242503261}
   - component: {fileID: 7512841663633768279}
   - component: {fileID: 5828271932601965510}
-  m_Layer: 6
+  m_Layer: 5
   m_Name: GuageBar (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -194,7 +194,7 @@ GameObject:
   - component: {fileID: 3308643534602109332}
   - component: {fileID: 3211518374046223807}
   - component: {fileID: 6518499319681163491}
-  m_Layer: 6
+  m_Layer: 5
   m_Name: GuageBG (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -265,7 +265,7 @@ GameObject:
   - component: {fileID: 3197908110756641237}
   - component: {fileID: 4159807945636648430}
   - component: {fileID: 5999324384749951441}
-  m_Layer: 6
+  m_Layer: 5
   m_Name: GuageEffectBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}

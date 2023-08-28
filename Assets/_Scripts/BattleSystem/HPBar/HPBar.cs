@@ -8,11 +8,17 @@ public class HPBar : MonoBehaviour
 {
     [SerializeField] private SlicedFilledImage gaugeBar;
     public float HpPercent => gaugeBar.fillAmount;
-
+    Quaternion fixedRotation;
 
     public void Initialize()
     {
-        transform.rotation = CameraManager.Instance.transform.rotation;
+        fixedRotation = CameraManager.Instance.transform.rotation;
+        transform.rotation = fixedRotation;
+    }
+    private void Update()
+    {
+
+        transform.rotation = fixedRotation;
     }
 
     public void UpdateHPBar(float value)

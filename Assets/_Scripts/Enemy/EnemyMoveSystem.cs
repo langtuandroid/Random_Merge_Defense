@@ -11,8 +11,10 @@ public class EnemyMoveSystem : MonoBehaviour
     [SerializeField] IntReactiveProperty pointIndex;
     [SerializeField] int maxPointIndex;
     float nextPointCheckDistance = 0.05f;
-    public void Initialize(System.Action playerLifeDecrease)
+    public void Initialize(EnemyData enemyData, System.Action playerLifeDecrease)
     {
+        moveSpeed = enemyData.moveSpeed;
+        rotateSpeed = enemyData.rotateSpeed;
         pointIndex = new IntReactiveProperty();
         pathPositions = PathTileList.Instance.PathPositions;
         maxPointIndex = pathPositions.Length;

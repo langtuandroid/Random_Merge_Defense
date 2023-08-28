@@ -4,27 +4,30 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
+    [SerializeField] RecycleObject recycleObject;
     EnemyMoveSystem enemyMoveSystem;
     EnemyDamageReceiver enemyDamageReceiver;
-    System.Action lastEnemyInWave;
-    public void Initialize(System.Action lastEnemyInWave)
+    System.Action<EnemyController> removeEnemy;
+    [SerializeField] EnemyData enemyData;
+    public void Initialize(System.Action<EnemyController> removeEnemy, EnemyData enemyData)
     {
-        lastEnemyInWave = this.lastEnemyInWave;
+        this.enemyData = enemyData;
+        this.removeEnemy = removeEnemy;
         enemyMoveSystem = GetComponentInChildren<EnemyMoveSystem>();
-        enemyMoveSystem.Initialize(PlayerLifeDecrease);
+        enemyMoveSystem.Initialize(enemyData, PlayerLifeDecrease);
         enemyDamageReceiver = GetComponentInChildren<EnemyDamageReceiver>();
-        enemyDamageReceiver.Initialize(100, Death);
+        enemyDamageReceiver.Initialize(enemyData.hp, Death);
     }
     void Death()
     {
-        lastEnemyInWave?.Invoke();
-        gameObject.SetActive(false);
+        removeEnemy.Invoke(this);
+        recycleObject.Restore();
     }
     void PlayerLifeDecrease()
     {
-        lastEnemyInWave?.Invoke();
-        LifeManager.Instance.LifeDecrease();
-        gameObject.SetActive(false);
+        removeEnemy.Invoke(this);
+        LifeManager.Instance.LifeDecrease(enemyData.lifeDecreaseAmount);
+        recycleObject.Restore();
     }
 
 }

@@ -12,22 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 192ad158e2f8f0947b184f6bd5ecb063, type: 3}
   m_Name: EnemyDataTable
   m_EditorClassIdentifier: 
-  _enemyDataTable:
+  enemyDataTable:
   - enemyId: a
     moveSpeed: 1
     rotateSpeed: 1
     hp: 10
     hpGrowth: 0.25
-    spawnInterval: 0.5
-    goldAmount: 1
+    spawnInterval: 1
     lifeDecreaseAmount: 1
   - enemyId: b
     moveSpeed: 2
     rotateSpeed: 2
     hp: 10
     hpGrowth: 0.25
-    spawnInterval: 0.1
-    goldAmount: 1
+    spawnInterval: 1
     lifeDecreaseAmount: 1
   - enemyId: c
     moveSpeed: 3
@@ -35,7 +33,6 @@ MonoBehaviour:
     hp: 10
     hpGrowth: 0.25
     spawnInterval: 0.2
-    goldAmount: 1
     lifeDecreaseAmount: 1
   - enemyId: d
     moveSpeed: 4
@@ -43,7 +40,6 @@ MonoBehaviour:
     hp: 10
     hpGrowth: 0.25
     spawnInterval: 0.2
-    goldAmount: 1
     lifeDecreaseAmount: 1
   - enemyId: e
     moveSpeed: 5
@@ -51,5 +47,4 @@ MonoBehaviour:
     hp: 10
     hpGrowth: 0.25
     spawnInterval: 0.2
-    goldAmount: 1
     lifeDecreaseAmount: 1

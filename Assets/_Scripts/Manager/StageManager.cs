@@ -5,11 +5,21 @@ using UnityEngine;
 public class StageManager : SingletonComponent<StageManager>
 {
     WaveManager waveManager;
-    public void Initialize()
+    public void Awake()
     {
         waveManager = GetComponentInChildren<WaveManager>();
         var stageData = DataManager.Database.StageDataLayer.GetData();
-        waveManager.Initialize(stageData.currentStageId, stageData.currentWaveIndex);
+        if (stageData == null)
+        {
+            stageData = new SaveData.StageData
+            {
+                currentStageId = 1,
+                currentWaveOrder = 0
+            };
+            DataManager.Database.StageDataLayer.SetData(stageData);
+        }
+        waveManager.Initialize(stageData.currentStageId, stageData.currentWaveOrder);
+        InGameUI.Instance.Initialize();
     }
     public void Fail()
     {

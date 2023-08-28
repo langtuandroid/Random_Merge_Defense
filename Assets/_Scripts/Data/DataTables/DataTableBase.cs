@@ -11,7 +11,7 @@ public class DataTableBase
 {
     DataTableSO[] datatables;
     public EnemyDataTableSO EnemyDataTable => GetTable<EnemyDataTableSO>();
-    public SpawnDataTableSO SpawnDataTable => GetTable<SpawnDataTableSO>();
+    public WaveSpawnDataTableSO WaveSpawnDataTable => GetTable<WaveSpawnDataTableSO>();
     public StageDataTableSO StageDataTable => GetTable<StageDataTableSO>();
     public WaveDataTableSO WaveDataTable => GetTable<WaveDataTableSO>();
     public async Task Init()

@@ -28,7 +28,7 @@ MonoBehaviour:
     m_SerializedLabels:
     - DataTable
   - m_GUID: 2300bb05f3179ad48be1d1269ee1698f
-    m_Address: SpawnDataTable
+    m_Address: WaveSpawnDataTable
     m_ReadOnly: 0
     m_SerializedLabels:
     - DataTable

@@ -5,12 +5,14 @@ using UnityEngine;
 public class LifeManager : SingletonComponent<LifeManager>
 {
     [SerializeField] int lifeAmount = 100;
+    public int LifeAmount => lifeAmount;
     public void Initialize()
     {
 
     }
-    public void LifeDecrease()
+    public void LifeDecrease(int decreaseAmount)
     {
-        lifeAmount--;
+        lifeAmount -= decreaseAmount;
+        InGameUI.Instance.TopUI.SetLifeText(lifeAmount);
     }
 }

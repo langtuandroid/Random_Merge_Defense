@@ -13,53 +13,13 @@ MonoBehaviour:
   m_Name: WaveDataTable
   m_EditorClassIdentifier: 
   waveDataTables:
-  - waveId: 1
-    enemyHpLevel: 1
-    enemyGoldLevel: 1
-    enemyIds:
-    - a
-    - 5
-    spawnIntervals:
-    - 0.5
-    - 5
-    enemyAmounts: 0500000005000000
-  - waveId: 2
-    enemyHpLevel: 1
-    enemyGoldLevel: 1
-    enemyIds:
-    - b
-    - 5
-    spawnIntervals:
-    - 0.5
-    - 5
-    enemyAmounts: 0500000005000000
-  - waveId: 3
-    enemyHpLevel: 1
-    enemyGoldLevel: 1
-    enemyIds:
-    - c
-    - 5
-    spawnIntervals:
-    - 0.5
-    - 5
-    enemyAmounts: 0500000005000000
-  - waveId: 4
-    enemyHpLevel: 1
-    enemyGoldLevel: 1
-    enemyIds:
-    - d
-    - 5
-    spawnIntervals:
-    - 0.5
-    - 5
-    enemyAmounts: 0500000005000000
-  - waveId: 5
-    enemyHpLevel: 1
-    enemyGoldLevel: 1
-    enemyIds:
-    - e
-    - 5
-    spawnIntervals:
-    - 0.5
-    - 5
-    enemyAmounts: 0500000005000000
+  - stageId: 1
+    waveSpawnIds: 0100000002000000030000000400000005000000
+  - stageId: 2
+    waveSpawnIds: 0100000002000000030000000400000005000000
+  - stageId: 3
+    waveSpawnIds: 0100000002000000030000000400000005000000
+  - stageId: 4
+    waveSpawnIds: 0100000002000000030000000400000005000000
+  - stageId: 5
+    waveSpawnIds: 0100000002000000030000000400000005000000

@@ -8,12 +8,8 @@ using UnityEngine;
 [System.Serializable]
 public struct WaveDataTable
 {
-    public int waveId;
-    public int enemyHpLevel;
-    public int enemyGoldLevel;
-    public List<string> enemyIds;
-    public List<float> spawnIntervals;
-    public List<int> enemyAmounts;
+    public int stageId;
+    public int[] waveSpawnIds;
 }
 namespace DataTable
 {
@@ -26,9 +22,7 @@ namespace DataTable
             JArray jArray = JArray.Parse(jsonString);
             for (int i = 0; i < jArray.Count; i++)
             {
-                JsonModify(jsonString, "enemyIds", i, ref jArray);
-                JsonModify(jsonString, "spawnIntervals", i, ref jArray);
-                JsonModify(jsonString, "enemyAmounts", i, ref jArray);
+                JsonModify(jsonString, "waveSpawnIds", i, ref jArray);
             }
             jsonString = jArray.ToString();
 #if UNITY_EDITOR
@@ -40,9 +34,9 @@ namespace DataTable
         {
             return waveDataTables;
         }
-        public WaveDataTable GetWaveDataTable(int waveId)
+        public int[] GetCurrentStageWaves(int stageId)
         {
-            return waveDataTables.Where(x => x.waveId == waveId).FirstOrDefault();
+            return waveDataTables.Where(x => x.stageId == stageId).FirstOrDefault().waveSpawnIds;
         }
     }
 }

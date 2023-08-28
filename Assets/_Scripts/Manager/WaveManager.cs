@@ -2,23 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WaveManager : MonoBehaviour
+public class WaveManager : SingletonComponent<WaveManager>
 {
     EnemySpawnManager enemySpawnManager;
-    int currentWaveIndex;
-    public void Initialize(int stageId, int currentWaveIndex)
+    int currentWaveOrder;
+    public void Initialize(int stageId, int currentWaveOrder)
     {
-        this.currentWaveIndex = currentWaveIndex;
+        this.currentWaveOrder = currentWaveOrder;
         enemySpawnManager = GetComponentInChildren<EnemySpawnManager>();
-        enemySpawnManager.Initialize(stageId, currentWaveIndex);
+        enemySpawnManager.Initialize(stageId, currentWaveOrder);
     }
-    private void Update()
+    public void WaveEnd()
     {
 
     }
-
-    public void WaveClear()
+    public void WaveStartImmediately()
     {
-
+        InGameUI.Instance.WaveUI.Off();
+        enemySpawnManager.WaveStartImmediately();
     }
 }

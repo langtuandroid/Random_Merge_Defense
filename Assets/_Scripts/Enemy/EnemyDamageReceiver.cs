@@ -14,7 +14,7 @@ public class EnemyDamageReceiver : DamageReceiver
     public void Initialize(float hp, Action deathAction)
     {
         this._onBattleMove = null;
-        _hPSystem = new HPSystem(hp, deathAction, null);
+        _hPSystem = new HPSystem(hp, deathAction, GetComponentInChildren<HPBar>());
         _knockBackWait = new WaitForFixedUpdate();
         _knockbackDuration = new WaitForSeconds(knockbackDuration);
     }

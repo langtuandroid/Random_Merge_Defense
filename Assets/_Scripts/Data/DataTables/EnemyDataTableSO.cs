@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Newtonsoft.Json;
 using UnityEngine;
 
@@ -12,7 +13,6 @@ public struct EnemyDataTable
     public float hp;
     public float hpGrowth;
     public float spawnInterval;
-    public int goldAmount;
     public int lifeDecreaseAmount;
 }
 namespace DataTable
@@ -20,17 +20,21 @@ namespace DataTable
     [CreateAssetMenu(fileName = "EnemyDataTable", menuName = "DataTable/EnemyDataTable", order = 0)]
     public class EnemyDataTableSO : DataTableSO
     {
-        [SerializeField] EnemyDataTable[] _enemyDataTable;
+        [SerializeField] EnemyDataTable[] enemyDataTable;
         public override void Read(string jsonString)
         {
 #if UNITY_EDITOR
-            _enemyDataTable = JsonConvert.DeserializeObject<EnemyDataTable[]>(jsonString);
+            enemyDataTable = JsonConvert.DeserializeObject<EnemyDataTable[]>(jsonString);
             UnityEditor.EditorUtility.SetDirty(this);
 #endif
         }
         public EnemyDataTable[] GetDataTables()
         {
-            return _enemyDataTable;
+            return enemyDataTable;
+        }
+        public EnemyDataTable GetEnemyData(string enemyId)
+        {
+            return enemyDataTable.Where(x => x.enemyId == enemyId).FirstOrDefault();
         }
     }
 }
