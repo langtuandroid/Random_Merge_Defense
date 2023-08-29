@@ -39,6 +39,8 @@ public class StageManager : SingletonComponent<StageManager>
 
             DataManager.Database.InGameDataLayer.SetData(inGameData);
         }
+        SeatTileList.Instance.Initialize();
+
         waveManager.Initialize(stageData.currentStageId, stageData.currentWaveOrder);
         InGameUI.Instance.Initialize();
         InGame_TowerUpgradeManager.Instance.Initialize();

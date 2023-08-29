@@ -56,14 +56,16 @@ public class InGameTowerUpgrade
 public struct EnemyData
 {
     public string id;
+    public int order;
     public float moveSpeed;
     public float rotateSpeed;
     public float hp;
     public float goldAmount;
     public int lifeDecreaseAmount;
-    public EnemyData(string id, float moveSpeed, float rotateSpeed, float hp, float goldAmount, int lifeDecreaseAmount)
+    public EnemyData(string id, int order, float moveSpeed, float rotateSpeed, float hp, float goldAmount, int lifeDecreaseAmount)
     {
         this.id = id;
+        this.order = order;
         this.moveSpeed = moveSpeed;
         this.rotateSpeed = rotateSpeed;
         this.hp = hp;

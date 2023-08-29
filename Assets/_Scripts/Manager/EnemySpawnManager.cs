@@ -2,18 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemySpawnManager : MonoBehaviour
+public class EnemySpawnManager : SingletonComponent<EnemySpawnManager>
 {
-    [SerializeField] bool wavePlay;
-    bool allWaveEnd;
+    public List<EnemyController> EnemyControllers => enemyControllers;
+
     [SerializeField] float waveInterval = 10f;
     [SerializeField] EnemySpawnDataProcessing spawnDataProcessing;
+
+
     List<EnemyController> enemyControllers = new List<EnemyController>();
-    [SerializeField] int currentGroupOrder;
-    [SerializeField] int currentWaveOrder;
-
-    [SerializeField] int currentSpawnAmount;
-
+    bool waveEnd;
+    bool allWaveEnd;
+    int currentGroupOrder;
+    int currentWaveOrder;
+    int currentSpawnAmount;
     float enemySpawnIntervalTimer;
     float groupSpawnIntervalTimer;
     float waveIntervalTimer;
@@ -31,7 +33,7 @@ public class EnemySpawnManager : MonoBehaviour
 
     private void Update()
     {
-        if (!wavePlay)
+        if (!waveEnd)
         {
             return;
         }
@@ -60,7 +62,7 @@ public class EnemySpawnManager : MonoBehaviour
                             waveIntervalTimer = 0;
                             currentGroupOrder = 0;
                             currentWaveOrder++;
-                            wavePlay = false;
+                            waveEnd = false;
                             //모든 웨이브의 스폰이 끝났다면
                             if (currentWaveOrder == spawnDataProcessing.EnemySpawnLists.Count - 1)
                             {
@@ -99,16 +101,16 @@ public class EnemySpawnManager : MonoBehaviour
         enemyControllers.Remove(enemy);
         if (!allWaveEnd)
         {
-            if (enemyControllers.Count == 0)
+            if (enemyControllers.Count == 0 && !waveEnd)
             {
                 InGameUI.Instance.WaveUI.On();
-                wavePlay = true;
+                waveEnd = true;
             }
         }
     }
     public void WaveStartImmediately()
     {
-        wavePlay = true;
+        waveEnd = true;
         waveIntervalTimer = 9999;
     }
 }

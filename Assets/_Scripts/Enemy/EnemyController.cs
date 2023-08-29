@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
+    public Rigidbody Rigidbody => enemyMoveSystem.Rigidbody;
+    public int Order => enemyData.order;
+    public bool IsDeath => isDeath;
+    public DamageReceiver DamageReceiver => enemyDamageReceiver;
+    bool isDeath;
     [SerializeField] RecycleObject recycleObject;
     EnemyMoveSystem enemyMoveSystem;
     EnemyDamageReceiver enemyDamageReceiver;
@@ -11,6 +16,7 @@ public class EnemyController : MonoBehaviour
     [SerializeField] EnemyData enemyData;
     public void Initialize(System.Action<EnemyController> removeEnemy, EnemyData enemyData)
     {
+        isDeath = false;
         this.enemyData = enemyData;
         this.removeEnemy = removeEnemy;
         enemyMoveSystem = GetComponentInChildren<EnemyMoveSystem>();
@@ -20,6 +26,7 @@ public class EnemyController : MonoBehaviour
     }
     void Death()
     {
+        isDeath = true;
         removeEnemy.Invoke(this);
         recycleObject.Restore();
     }

@@ -14,10 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerAbilityDataTable:
   - abilityId: 10010
-    attackPower: 20
+    grade: 1
+    attackPower: 1
     attackDistance: 3
     criticalRate: 0
-    actCoolDown: 1
+    actCoolDown: 0.2
     operationTimes: 1
     operationInterval: -1
     objectMultiple: 1
@@ -31,10 +32,11 @@ MonoBehaviour:
     - -1
     - -1
   - abilityId: 10011
-    attackPower: 50
+    grade: 2
+    attackPower: 1
     attackDistance: 3
     criticalRate: 0.1
-    actCoolDown: 1
+    actCoolDown: 0.2
     operationTimes: 1
     operationInterval: -1
     objectMultiple: 1
@@ -48,10 +50,11 @@ MonoBehaviour:
     - -1
     - -1
   - abilityId: 10012
-    attackPower: 5
+    grade: 3
+    attackPower: 1
     attackDistance: 3
     criticalRate: 0.2
-    actCoolDown: 1
+    actCoolDown: 0.2
     operationTimes: 1
     operationInterval: -1
     objectMultiple: 1
@@ -65,10 +68,11 @@ MonoBehaviour:
     - -1
     - -1
   - abilityId: 10013
-    attackPower: 7
+    grade: 4
+    attackPower: 1
     attackDistance: 3
     criticalRate: 0.3
-    actCoolDown: 1
+    actCoolDown: 0.2
     operationTimes: 1
     operationInterval: -1
     objectMultiple: 1
@@ -82,10 +86,11 @@ MonoBehaviour:
     - -1
     - -1
   - abilityId: 10014
-    attackPower: 9
+    grade: 5
+    attackPower: 1
     attackDistance: 3
     criticalRate: 0.4
-    actCoolDown: 1
+    actCoolDown: 0.2
     operationTimes: 1
     operationInterval: -1
     objectMultiple: 1
@@ -99,10 +104,11 @@ MonoBehaviour:
     - -1
     - -1
   - abilityId: 10015
-    attackPower: 11
+    grade: 6
+    attackPower: 1
     attackDistance: 3
     criticalRate: 0.5
-    actCoolDown: 1
+    actCoolDown: 0.2
     operationTimes: 1
     operationInterval: -1
     objectMultiple: 1
@@ -116,10 +122,11 @@ MonoBehaviour:
     - -1
     - -1
   - abilityId: 10020
+    grade: 1
     attackPower: 1
     attackDistance: 3
     criticalRate: 0
-    actCoolDown: 1.5
+    actCoolDown: 0.2
     operationTimes: 1
     operationInterval: -1
     objectMultiple: 1
@@ -133,10 +140,11 @@ MonoBehaviour:
     - -1
     - -1
   - abilityId: 10021
-    attackPower: 2.5
+    grade: 2
+    attackPower: 1
     attackDistance: 3
     criticalRate: 0.1
-    actCoolDown: 1.5
+    actCoolDown: 0.2
     operationTimes: 1
     operationInterval: -1
     objectMultiple: 1
@@ -150,13 +158,14 @@ MonoBehaviour:
     - -1
     - -1
   - abilityId: 10022
-    attackPower: 4
+    grade: 3
+    attackPower: 1
     attackDistance: 3
     criticalRate: 0.2
-    actCoolDown: 1.5
+    actCoolDown: 0.2
     operationTimes: 1
     operationInterval: -1
-    objectMultiple: 2
+    objectMultiple: 1
     objectMultipleAngle: 45
     penetrationCount: -1
     values:
@@ -167,13 +176,14 @@ MonoBehaviour:
     - -1
     - -1
   - abilityId: 10023
-    attackPower: 5.5
+    grade: 4
+    attackPower: 1
     attackDistance: 3
     criticalRate: 0.3
-    actCoolDown: 1.5
+    actCoolDown: 0.2
     operationTimes: 1
     operationInterval: -1
-    objectMultiple: 2
+    objectMultiple: 1
     objectMultipleAngle: 45
     penetrationCount: -1
     values:
@@ -184,13 +194,14 @@ MonoBehaviour:
     - -1
     - -1
   - abilityId: 10024
-    attackPower: 7
+    grade: 5
+    attackPower: 1
     attackDistance: 3
     criticalRate: 0.4
-    actCoolDown: 1.5
+    actCoolDown: 0.2
     operationTimes: 1
     operationInterval: -1
-    objectMultiple: 3
+    objectMultiple: 1
     objectMultipleAngle: 45
     penetrationCount: -1
     values:
@@ -201,13 +212,14 @@ MonoBehaviour:
     - -1
     - -1
   - abilityId: 10025
-    attackPower: 8.5
+    grade: 6
+    attackPower: 1
     attackDistance: 3
     criticalRate: 0.5
-    actCoolDown: 1.5
+    actCoolDown: 0.2
     operationTimes: 1
     operationInterval: -1
-    objectMultiple: 3
+    objectMultiple: 1
     objectMultipleAngle: 45
     penetrationCount: -1
     values:
@@ -218,10 +230,11 @@ MonoBehaviour:
     - -1
     - -1
   - abilityId: 10030
+    grade: 1
     attackPower: 1
     attackDistance: 3
     criticalRate: 0
-    actCoolDown: 2
+    actCoolDown: 0.2
     operationTimes: 1
     operationInterval: -1
     objectMultiple: 1
@@ -235,10 +248,11 @@ MonoBehaviour:
     - -1
     - -1
   - abilityId: 10031
-    attackPower: 2.5
+    grade: 2
+    attackPower: 1
     attackDistance: 3
     criticalRate: 0.1
-    actCoolDown: 2
+    actCoolDown: 0.2
     operationTimes: 1
     operationInterval: -1
     objectMultiple: 1
@@ -252,10 +266,11 @@ MonoBehaviour:
     - -1
     - -1
   - abilityId: 10032
-    attackPower: 4
+    grade: 3
+    attackPower: 1
     attackDistance: 3
     criticalRate: 0.2
-    actCoolDown: 2
+    actCoolDown: 0.2
     operationTimes: 1
     operationInterval: -1
     objectMultiple: 1
@@ -269,10 +284,11 @@ MonoBehaviour:
     - -1
     - -1
   - abilityId: 10033
-    attackPower: 5.5
+    grade: 4
+    attackPower: 1
     attackDistance: 3
     criticalRate: 0.3
-    actCoolDown: 2
+    actCoolDown: 0.2
     operationTimes: 1
     operationInterval: -1
     objectMultiple: 1
@@ -286,10 +302,11 @@ MonoBehaviour:
     - -1
     - -1
   - abilityId: 10034
-    attackPower: 7
+    grade: 5
+    attackPower: 1
     attackDistance: 3
     criticalRate: 0.4
-    actCoolDown: 2
+    actCoolDown: 0.2
     operationTimes: 1
     operationInterval: -1
     objectMultiple: 1
@@ -303,10 +320,11 @@ MonoBehaviour:
     - -1
     - -1
   - abilityId: 10035
-    attackPower: 8.5
+    grade: 6
+    attackPower: 1
     attackDistance: 3
     criticalRate: 0.5
-    actCoolDown: 2
+    actCoolDown: 0.2
     operationTimes: 1
     operationInterval: -1
     objectMultiple: 1
@@ -320,10 +338,11 @@ MonoBehaviour:
     - -1
     - -1
   - abilityId: 10040
+    grade: 1
     attackPower: 1
     attackDistance: 3
     criticalRate: 0
-    actCoolDown: 2
+    actCoolDown: 0.2
     operationTimes: 1
     operationInterval: -1
     objectMultiple: 1
@@ -337,10 +356,11 @@ MonoBehaviour:
     - -1
     - -1
   - abilityId: 10041
-    attackPower: 2.5
+    grade: 2
+    attackPower: 1
     attackDistance: 3
     criticalRate: 0.1
-    actCoolDown: 2
+    actCoolDown: 0.2
     operationTimes: 1
     operationInterval: -1
     objectMultiple: 1
@@ -354,10 +374,11 @@ MonoBehaviour:
     - -1
     - -1
   - abilityId: 10042
-    attackPower: 4
+    grade: 3
+    attackPower: 1
     attackDistance: 3
     criticalRate: 0.2
-    actCoolDown: 2
+    actCoolDown: 0.2
     operationTimes: 1
     operationInterval: -1
     objectMultiple: 1
@@ -371,10 +392,11 @@ MonoBehaviour:
     - -1
     - -1
   - abilityId: 10043
-    attackPower: 5.5
+    grade: 4
+    attackPower: 1
     attackDistance: 3
     criticalRate: 0.3
-    actCoolDown: 2
+    actCoolDown: 0.2
     operationTimes: 1
     operationInterval: -1
     objectMultiple: 1
@@ -388,10 +410,11 @@ MonoBehaviour:
     - -1
     - -1
   - abilityId: 10044
-    attackPower: 7
+    grade: 5
+    attackPower: 1
     attackDistance: 3
     criticalRate: 0.4
-    actCoolDown: 2
+    actCoolDown: 0.2
     operationTimes: 1
     operationInterval: -1
     objectMultiple: 1
@@ -405,10 +428,11 @@ MonoBehaviour:
     - -1
     - -1
   - abilityId: 10045
-    attackPower: 8.5
+    grade: 6
+    attackPower: 1
     attackDistance: 3
     criticalRate: 0.5
-    actCoolDown: 2
+    actCoolDown: 0.2
     operationTimes: 1
     operationInterval: -1
     objectMultiple: 1
@@ -422,10 +446,11 @@ MonoBehaviour:
     - -1
     - -1
   - abilityId: 10050
+    grade: 1
     attackPower: 1
     attackDistance: 3
     criticalRate: 0
-    actCoolDown: 0.75
+    actCoolDown: 0.2
     operationTimes: 1
     operationInterval: -1
     objectMultiple: 1
@@ -439,10 +464,11 @@ MonoBehaviour:
     - -1
     - -1
   - abilityId: 10051
-    attackPower: 3
+    grade: 2
+    attackPower: 1
     attackDistance: 3
     criticalRate: 0.1
-    actCoolDown: 0.75
+    actCoolDown: 0.2
     operationTimes: 1
     operationInterval: -1
     objectMultiple: 1
@@ -456,10 +482,11 @@ MonoBehaviour:
     - -1
     - -1
   - abilityId: 10052
-    attackPower: 5
+    grade: 3
+    attackPower: 1
     attackDistance: 3
     criticalRate: 0.2
-    actCoolDown: 0.75
+    actCoolDown: 0.2
     operationTimes: 1
     operationInterval: -1
     objectMultiple: 1
@@ -473,10 +500,11 @@ MonoBehaviour:
     - -1
     - -1
   - abilityId: 10053
-    attackPower: 7
+    grade: 4
+    attackPower: 1
     attackDistance: 3
     criticalRate: 0.3
-    actCoolDown: 0.75
+    actCoolDown: 0.2
     operationTimes: 1
     operationInterval: -1
     objectMultiple: 1
@@ -490,10 +518,11 @@ MonoBehaviour:
     - -1
     - -1
   - abilityId: 10054
-    attackPower: 9
+    grade: 5
+    attackPower: 1
     attackDistance: 3
     criticalRate: 0.4
-    actCoolDown: 0.75
+    actCoolDown: 0.2
     operationTimes: 1
     operationInterval: -1
     objectMultiple: 1
@@ -507,10 +536,119 @@ MonoBehaviour:
     - -1
     - -1
   - abilityId: 10055
-    attackPower: 11
+    grade: 6
+    attackPower: 1
     attackDistance: 3
     criticalRate: 0.5
-    actCoolDown: 0.75
+    actCoolDown: 0.2
+    operationTimes: 1
+    operationInterval: -1
+    objectMultiple: 1
+    objectMultipleAngle: -1
+    penetrationCount: -1
+    values:
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+  - abilityId: 10060
+    grade: 1
+    attackPower: 1
+    attackDistance: 3
+    criticalRate: 0
+    actCoolDown: 0.2
+    operationTimes: 1
+    operationInterval: -1
+    objectMultiple: 1
+    objectMultipleAngle: -1
+    penetrationCount: -1
+    values:
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+  - abilityId: 10061
+    grade: 2
+    attackPower: 1
+    attackDistance: 3
+    criticalRate: 0.1
+    actCoolDown: 0.2
+    operationTimes: 1
+    operationInterval: -1
+    objectMultiple: 1
+    objectMultipleAngle: -1
+    penetrationCount: -1
+    values:
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+  - abilityId: 10062
+    grade: 3
+    attackPower: 1
+    attackDistance: 3
+    criticalRate: 0.2
+    actCoolDown: 0.2
+    operationTimes: 1
+    operationInterval: -1
+    objectMultiple: 1
+    objectMultipleAngle: -1
+    penetrationCount: -1
+    values:
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+  - abilityId: 10063
+    grade: 4
+    attackPower: 1
+    attackDistance: 3
+    criticalRate: 0.3
+    actCoolDown: 0.2
+    operationTimes: 1
+    operationInterval: -1
+    objectMultiple: 1
+    objectMultipleAngle: -1
+    penetrationCount: -1
+    values:
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+  - abilityId: 10064
+    grade: 5
+    attackPower: 1
+    attackDistance: 3
+    criticalRate: 0.4
+    actCoolDown: 0.2
+    operationTimes: 1
+    operationInterval: -1
+    objectMultiple: 1
+    objectMultipleAngle: -1
+    penetrationCount: -1
+    values:
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+  - abilityId: 10065
+    grade: 6
+    attackPower: 1
+    attackDistance: 3
+    criticalRate: 0.5
+    actCoolDown: 0.2
     operationTimes: 1
     operationInterval: -1
     objectMultiple: 1

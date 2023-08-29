@@ -62,22 +62,22 @@ public class EnemySpawnDataProcessing
     {
         WaveSpawnDataTable waveSpawnDataTable = DataManager.DataTableBase.WaveSpawnDataTable.GetWaveSpawnData(waveSpawnId);
         List<EnemyGroup> enemyGroupList = new List<EnemyGroup>();
-        for (int i = 0; i < waveSpawnDataTable.enemyIds.Length; i++)
+        for (int order = 0; order < waveSpawnDataTable.enemyIds.Length; order++)
         {
-            if (waveSpawnDataTable.enemyIds[i] != "-1")
+            if (waveSpawnDataTable.enemyIds[order] != "-1")
             {
-                EnemyDataTable enemyDataTable = DataManager.DataTableBase.EnemyDataTable.GetEnemyData(waveSpawnDataTable.enemyIds[i]);
+                EnemyDataTable enemyDataTable = DataManager.DataTableBase.EnemyDataTable.GetEnemyData(waveSpawnDataTable.enemyIds[order]);
 
-                enemyGroupList.Add(new EnemyGroup(waveSpawnDataTable.enemyAmounts[i], waveSpawnDataTable.groupSpawnIntervals[i],
-                enemyDataTable.spawnInterval, SetEnemyData(waveSpawnDataTable.enemyHpLevel, waveSpawnDataTable.enemyGoldAmounts[i], enemyDataTable)));
+                enemyGroupList.Add(new EnemyGroup(waveSpawnDataTable.enemyAmounts[order], waveSpawnDataTable.groupSpawnIntervals[order],
+                enemyDataTable.spawnInterval, SetEnemyData(waveSpawnDataTable.enemyHpLevel, waveSpawnDataTable.enemyGoldAmounts[order], enemyDataTable, order)));
             }
         }
         return enemyGroupList;
     }
 
-    EnemyData SetEnemyData(int enemyHpLevel, int enemyGoldAmount, EnemyDataTable enemyDataTable)
+    EnemyData SetEnemyData(int enemyHpLevel, int enemyGoldAmount, EnemyDataTable enemyDataTable, int order)
     {
-        return new EnemyData(enemyDataTable.enemyId, enemyDataTable.moveSpeed, enemyDataTable.rotateSpeed, Pow(enemyDataTable.hp, enemyDataTable.hpGrowth, enemyHpLevel), enemyGoldAmount, enemyDataTable.lifeDecreaseAmount);
+        return new EnemyData(enemyDataTable.enemyId, order, enemyDataTable.moveSpeed, enemyDataTable.rotateSpeed, Pow(enemyDataTable.hp, enemyDataTable.hpGrowth, enemyHpLevel), enemyGoldAmount, enemyDataTable.lifeDecreaseAmount);
     }
     float Pow(float baseValue, float growth, int level)
     {

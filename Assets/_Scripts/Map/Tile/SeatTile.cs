@@ -9,14 +9,22 @@ public class SeatTile : RuleTile3D
     [SerializeField] int seatId;
     bool filled = false;
     TowerController towerController;
+    System.Action<SeatTile> filledSeatAdd;
+    System.Action<SeatTile> notFilledSeatAdd;
+    public void Initialize(System.Action<SeatTile> filledSeatAdd, System.Action<SeatTile> notFilledSeatAdd)
+    {
+        this.filledSeatAdd = filledSeatAdd;
+        this.notFilledSeatAdd = notFilledSeatAdd;
+    }
     public void BuildTower(TowerController towerController)
     {
         filled = true;
         this.towerController = towerController;
+        filledSeatAdd.Invoke(this);
     }
     public void DeleteTower()
     {
-
+        notFilledSeatAdd.Invoke(this);
     }
 
 

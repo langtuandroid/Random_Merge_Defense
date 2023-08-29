@@ -24,9 +24,8 @@ public class FloatingTextParticle : RecycleParticle
     }
     public void Play(string content)
     {
-        // transform.rotation = CameraManager.Instance.transform.rotation;
+        transform.rotation = CameraManager.Instance.transform.rotation;
         textMesh.text = content;
-
     }
 
     public override void Stop()

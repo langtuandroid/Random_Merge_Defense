@@ -5,10 +5,9 @@ using System.Security.Cryptography;
 using UnityEngine;
 public class TowerBuildingSystem : MonoBehaviour
 {
-    SeatTile[] seatTiles;
     public void Initialize()
     {
-        seatTiles = SeatTileList.Instance.SeatTiles;
+        SeatTile[] seatTiles = SeatTileList.Instance.SeatTiles;
         List<SeatData> seatData = DataManager.Database.InGameDataLayer.GetData().seatDatas;
         for (int i = 0; i < seatData.Count; i++)
         {
@@ -25,7 +24,7 @@ public class TowerBuildingSystem : MonoBehaviour
 
     public void RandomBuildTower()
     {
-        SeatTile[] buildAbleSeats = seatTiles.Where(x => !x.Filled).ToArray();
+        SeatTile[] buildAbleSeats = SeatTileList.Instance.NotFilledSeats.ToArray();
         if (buildAbleSeats.Length == 0) return;
 
         string[] ownDeckTowerIds = DataManager.Database.PlayerDataLayer.GetData().ownDeckTowerIds.ToArray();

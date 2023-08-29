@@ -11,7 +11,6 @@ public class HPSystem
 
     private bool isDeath = false;
     public bool IsDeath => isDeath;
-    bool onHpBar;
     IDisposable hpSubscribe;
     public HPSystem(float maxHp, Action deathAction, HPBar hPBar)
     {
@@ -26,11 +25,8 @@ public class HPSystem
                      isDeath = true;
                      deathAction.Invoke();
                  }
-                 if (onHpBar)
-                 {
-                     _gaugeValue = x / this.maxHp;
-                     hPBar.UpdateHPBar(_gaugeValue);
-                 }
+                 _gaugeValue = x / this.maxHp;
+                 hPBar.UpdateHPBar(_gaugeValue);
              });
     }
     public void Damage(float damage)

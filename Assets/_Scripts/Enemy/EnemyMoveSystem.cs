@@ -4,6 +4,7 @@ using UnityEngine;
 using UniRx;
 public class EnemyMoveSystem : MonoBehaviour
 {
+    public Rigidbody Rigidbody => rigidbody;
     [SerializeField] new Rigidbody rigidbody;
     public float moveSpeed;
     public float rotateSpeed;

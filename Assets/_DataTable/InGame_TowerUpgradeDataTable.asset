@@ -14,14 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inGame_TowerUpgradeDataTables:
   - towerId: Tower_A
-    upgradeValue: 1.2
+    upgradeValue: 0.2
   - towerId: Tower_B
-    upgradeValue: 1.2
+    upgradeValue: 0.2
   - towerId: Tower_C
-    upgradeValue: 1.5
+    upgradeValue: 0.2
   - towerId: Tower_D
-    upgradeValue: 1.5
+    upgradeValue: 0.2
   - towerId: Tower_E
-    upgradeValue: 1.5
+    upgradeValue: 0.2
   - towerId: Tower_F
-    upgradeValue: 1.5
+    upgradeValue: 0.2
