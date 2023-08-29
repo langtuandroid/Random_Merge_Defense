@@ -5,15 +5,12 @@ using UnityEngine;
 
 public class InGame_TowerUpgradeManager : SingletonComponent<InGame_TowerUpgradeManager>
 {
+    public int RequiredInitialGold => requiredInitialGold;
+    [SerializeField] int requiredInitialGold;
     List<InGameTowerUpgrade> inGameTowerUpgrades = new List<InGameTowerUpgrade>();
     public void Initialize()
     {
-        var playerData = DataManager.Database.PlayerDataLayer.GetData();
-        for (int i = 0; i < playerData.ownDeckTowerIds.Count; i++)
-        {
-            var inGame_TowerUpgradeDataTable = DataManager.DataTableBase.InGame_TowerUpgradeDataTable.GetTowerAbilityDataTable(playerData.ownDeckTowerIds[i]);
-            inGameTowerUpgrades.Add(new InGameTowerUpgrade(playerData.ownDeckTowerIds[i], 0, inGame_TowerUpgradeDataTable.upgradeValue));
-        }
+        inGameTowerUpgrades = DataManager.Database.InGameDataLayer.GetData().inGameTowerUpgrades;
     }
     public void Upgrade(string towerId)
     {

@@ -36,7 +36,13 @@ public class StageManager : SingletonComponent<StageManager>
         if (inGameData == null)
         {
             inGameData = new SaveData.InGameData();
-
+            List<InGameTowerUpgrade> inGameTowerUpgrades = new List<InGameTowerUpgrade>();
+            for (int i = 0; i < playerData.ownDeckTowerIds.Count; i++)
+            {
+                InGame_TowerUpgradeDataTable inGame_TowerUpgradeDataTable = DataManager.DataTableBase.InGame_TowerUpgradeDataTable.GetTowerAbilityDataTable(playerData.ownDeckTowerIds[i]);
+                inGameTowerUpgrades.Add(new InGameTowerUpgrade(playerData.ownDeckTowerIds[i], 0, inGame_TowerUpgradeDataTable.upgradeValue, inGame_TowerUpgradeDataTable.goldIncrease));
+            }
+            inGameData.inGameTowerUpgrades = inGameTowerUpgrades;
             DataManager.Database.InGameDataLayer.SetData(inGameData);
         }
         SeatTileList.Instance.Initialize();
@@ -45,6 +51,7 @@ public class StageManager : SingletonComponent<StageManager>
         InGameUI.Instance.Initialize();
         InGame_TowerUpgradeManager.Instance.Initialize();
         TowerManager.Instance.Initialize();
+        GoldManager.Instance.Initialize();
     }
     public void Fail()
     {

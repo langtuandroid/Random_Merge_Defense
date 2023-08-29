@@ -20,7 +20,6 @@ namespace SaveData
     [System.Serializable]
     public class InGameData
     {
-
         public int goldAmount;
         public List<InGameTowerUpgrade> inGameTowerUpgrades = new List<InGameTowerUpgrade>();
         public List<SeatData> seatDatas = new List<SeatData>();
@@ -34,17 +33,20 @@ public struct SeatData
     public string towerId;
     public string abilityId;
 }
+[System.Serializable]
 public class InGameTowerUpgrade
 {
     public string towerId;
     public int upgradeLevel;
     float value;
     public float UpgradeValue => 1 + (value * upgradeLevel);
-    public InGameTowerUpgrade(string towerId, int upgradeLevel, float value)
+    public int goldIncrease;
+    public InGameTowerUpgrade(string towerId, int upgradeLevel, float value, int goldIncrease)
     {
         this.towerId = towerId;
         this.upgradeLevel = upgradeLevel;
         this.value = value;
+        this.goldIncrease = goldIncrease;
     }
     public void Upgrade()
     {
@@ -118,5 +120,15 @@ public struct TowerData
         this.penetrationCount = penetrationCount;
         this.values = values;
         this.inGameTowerUpgrade = inGameTowerUpgrade;
+    }
+}
+public struct NextUpgradeInfo
+{
+    public int goldAmount;
+    public int level;
+    public NextUpgradeInfo(int goldAmount, int level)
+    {
+        this.goldAmount = goldAmount;
+        this.level = level;
     }
 }

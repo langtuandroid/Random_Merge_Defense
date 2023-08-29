@@ -75,7 +75,6 @@ public abstract class TowerAttackSystem : MonoBehaviour
         enemyControllers = enemyControllers.OrderBy(x => x.Order).ToList();
     }
     protected abstract void Attack(int attackCount);
-    // _rotation = Quaternion.AngleAxis((attackCount * towerData.ObjectMultipleAngle) - (towerData.ObjectMultiple / 2 * towerData.ObjectMultipleAngle), Vector3.forward);
     private void OnTriggerEnter(Collider other)
     {
         enemyControllers.Add(other.GetComponent<EnemyController>());

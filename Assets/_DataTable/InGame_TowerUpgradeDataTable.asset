@@ -15,13 +15,19 @@ MonoBehaviour:
   inGame_TowerUpgradeDataTables:
   - towerId: Tower_A
     upgradeValue: 0.2
+    goldIncrease: 10
   - towerId: Tower_B
     upgradeValue: 0.2
+    goldIncrease: 10
   - towerId: Tower_C
     upgradeValue: 0.2
+    goldIncrease: 10
   - towerId: Tower_D
     upgradeValue: 0.2
+    goldIncrease: 10
   - towerId: Tower_E
     upgradeValue: 0.2
+    goldIncrease: 10
   - towerId: Tower_F
     upgradeValue: 0.2
+    goldIncrease: 10

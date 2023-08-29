@@ -10,6 +10,7 @@ public struct InGame_TowerUpgradeDataTable
 {
     public string towerId;
     public float upgradeValue;
+    public int goldIncrease;
 
 }
 namespace DataTable

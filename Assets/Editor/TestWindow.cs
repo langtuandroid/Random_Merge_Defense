@@ -9,7 +9,10 @@ public class TestWindow : EditorWindow
     [SerializeField] VisualTreeAsset _tree;
 
     //GameSpeed
-    private FloatField _gameSpeed;
+    private FloatField gameSpeed;
+
+    //골드량
+    private IntegerField goldAmount;
 
     VisualElement root;
 
@@ -26,8 +29,13 @@ public class TestWindow : EditorWindow
         _tree.CloneTree(root);
 
         //게임 스피드 
-        _gameSpeed = root.Q<FloatField>("GameSpeed");
-        _gameSpeed.RegisterValueChangedCallback(x => Time.timeScale = x.newValue);
+        gameSpeed = root.Q<FloatField>("GameSpeed");
+        gameSpeed.RegisterValueChangedCallback(x => Time.timeScale = x.newValue);
+
+
+        goldAmount = root.Q<IntegerField>("GoldAmount");
+        goldAmount.RegisterValueChangedCallback(x => GoldManager.Instance.SetGold(x.newValue));
+
 
     }
 
