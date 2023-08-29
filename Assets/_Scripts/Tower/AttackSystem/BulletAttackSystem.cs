@@ -11,6 +11,13 @@ public class BulletAttackSystem : TowerAttackSystem
         dir = enemyControllers[0].Rigidbody.position - parentRigid.position;
         dir.y = 0;
         parentRigid.rotation = Quaternion.LookRotation(dir);
-        enemyControllers[0].DamageReceiver.Damage(towerData.AttackPower);
+        if (critical)
+        {
+            enemyControllers[0].DamageReceiver.Damage(towerData.CriticalAttackPower, true);
+        }
+        else
+        {
+            enemyControllers[0].DamageReceiver.Damage(towerData.AttackPower, false);
+        }
     }
 }

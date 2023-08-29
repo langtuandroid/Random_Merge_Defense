@@ -9,10 +9,17 @@ public class EnemyDamageReceiver : DamageReceiver
     {
         _hPSystem = new HPSystem(hp, deathAction, GetComponentInChildren<HPBar>());
     }
-    public override void Damage(float damage)
+    public override void Damage(float damage, bool critical)
     {
-        base.Damage(damage);
-        FactoryManager.Instance.GetFloatingTextParticle(transform.position).Play(string.Format($"{(int)damage}"));
+        base.Damage(damage, critical);
+        if (critical)
+        {
+            FactoryManager.Instance.GetCritialFloatingTextParticle(transform.position).Play(string.Format($"{(int)damage}"));
+        }
+        else
+        {
+            FactoryManager.Instance.GetFloatingTextParticle(transform.position).Play(string.Format($"{(int)damage}"));
+        }
     }
 
 

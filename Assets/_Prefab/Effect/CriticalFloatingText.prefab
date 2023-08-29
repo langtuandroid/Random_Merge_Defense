@@ -109,8 +109,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190335
+  m_fontColor: {r: 1, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -184,7 +184,7 @@ GameObject:
   - component: {fileID: 8513179972955120072}
   - component: {fileID: 6070532766131869845}
   m_Layer: 5
-  m_Name: FloatingText
+  m_Name: CriticalFloatingText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -218,8 +218,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecf2355545585af4a9d23ee39b544b59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: FloatingParticle
-  poolSize: 200
+  id: CriticalFloatingText
+  poolSize: 60
   plusY: 0
 --- !u!95 &6070532766131869845
 Animator:

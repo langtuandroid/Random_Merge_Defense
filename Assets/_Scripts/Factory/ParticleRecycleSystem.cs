@@ -32,8 +32,9 @@ public class ParticleRecycleSystem
         }
     }
     [SerializeField] ParticleComponent[] particles;
-    ParticleComponent _floatingParticleComponent;
-    FloatingTextParticle _floatingParticle;
+    ParticleComponent floatingParticleComponent;
+    ParticleComponent criticalFloatingParticleComponent;
+    FloatingTextParticle floatingParticle;
     Camera camera;
     public Task Initialize()
     {
@@ -57,10 +58,15 @@ public class ParticleRecycleSystem
            {
                if ("FloatingParticle" == particles[i].id)
                {
-                   _floatingParticleComponent = particles[i];
+                   floatingParticleComponent = particles[i];
+               }
+               if ("CriticalFloatingText" == particles[i].id)
+               {
+                   criticalFloatingParticleComponent = particles[i];
                }
            }
-           _floatingParticleComponent.factory.CreatPool();
+           floatingParticleComponent.factory.CreatPool();
+           criticalFloatingParticleComponent.factory.CreatPool();
        };
 
         return handle.Task;
@@ -92,10 +98,17 @@ public class ParticleRecycleSystem
     }
     public FloatingTextParticle GetFloatingTextParticle(Vector3 pos)
     {
-        _floatingParticle = _floatingParticleComponent.factory.Get() as FloatingTextParticle;
-        pos.y += _floatingParticleComponent.plusY;
-        _floatingParticle.transform.position = pos;
-        return _floatingParticle;
+        floatingParticle = floatingParticleComponent.factory.Get() as FloatingTextParticle;
+        pos.y += floatingParticleComponent.plusY;
+        floatingParticle.transform.position = pos;
+        return floatingParticle;
+    }
+    public FloatingTextParticle GetCritialFloatingTextParticle(Vector3 pos)
+    {
+        floatingParticle = criticalFloatingParticleComponent.factory.Get() as FloatingTextParticle;
+        pos.y += criticalFloatingParticleComponent.plusY;
+        floatingParticle.transform.position = pos;
+        return floatingParticle;
     }
     public void AllRestore()
     {

@@ -12,6 +12,7 @@ public abstract class TowerAttackSystem : MonoBehaviour
     IEnumerator _attackCo;
     WaitForFixedUpdate waitForFixedUpdate;
     protected System.Action attackAnimation;
+    protected bool critical => towerData.CriticalRate <= Random.value ? true : false;
     public void Initialize(TowerData towerData, System.Action attackAnimation)
     {
         attackDetectCollider.radius = towerData.AttackDistance;

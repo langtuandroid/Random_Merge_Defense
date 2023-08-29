@@ -19,6 +19,10 @@ public class FactoryManager : SingletonComponent<FactoryManager>
     {
         return particleFactory.GetFloatingTextParticle(pos);
     }
+    public FloatingTextParticle GetCritialFloatingTextParticle(Vector3 pos)
+    {
+        return particleFactory.GetCritialFloatingTextParticle(pos);
+    }
     public EnemyController GetEnemyController(string id, Vector3 pos, Vector3 lookAtTarget)
     {
         return enemyFactory.GetRecycleEnemy(id, pos, lookAtTarget);

@@ -17,5 +17,5 @@ public class DamageReceiver : MonoBehaviour
         }
     }
     public bool IsDeath => _hPSystem.IsDeath;
-    public virtual void Damage(float damage) => _hPSystem.Damage(damage);
+    public virtual void Damage(float damage, bool critical) => _hPSystem.Damage(damage);
 }

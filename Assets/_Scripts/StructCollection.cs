@@ -38,7 +38,7 @@ public class InGameTowerUpgrade
 {
     public string towerId;
     public int upgradeLevel;
-    float value;
+    public float value;
     public float UpgradeValue => 1 + (value * upgradeLevel);
     public int goldIncrease;
     public InGameTowerUpgrade(string towerId, int upgradeLevel, float value, int goldIncrease)
@@ -82,6 +82,7 @@ public struct TowerData
     public string TowerID => towerId;
     public string AbilityId => abilityId;
     public float AttackPower => attackPower * inGameTowerUpgrade.UpgradeValue;
+    public float CriticalAttackPower => AttackPower * 2;
     public float AttackDistance => attackDistance;
     public float CriticalRate => criticalRate;
     public float ActCoolDown => actCoolDown;

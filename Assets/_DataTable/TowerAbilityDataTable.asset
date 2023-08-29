@@ -17,7 +17,7 @@ MonoBehaviour:
     grade: 1
     attackPower: 1
     attackDistance: 3
-    criticalRate: 0
+    criticalRate: 0.5
     actCoolDown: 0.2
     operationTimes: 1
     operationInterval: -1
@@ -35,7 +35,7 @@ MonoBehaviour:
     grade: 2
     attackPower: 1
     attackDistance: 3
-    criticalRate: 0.1
+    criticalRate: 0.5
     actCoolDown: 0.2
     operationTimes: 1
     operationInterval: -1
@@ -53,7 +53,7 @@ MonoBehaviour:
     grade: 3
     attackPower: 1
     attackDistance: 3
-    criticalRate: 0.2
+    criticalRate: 0.5
     actCoolDown: 0.2
     operationTimes: 1
     operationInterval: -1
@@ -71,7 +71,7 @@ MonoBehaviour:
     grade: 4
     attackPower: 1
     attackDistance: 3
-    criticalRate: 0.3
+    criticalRate: 0.5
     actCoolDown: 0.2
     operationTimes: 1
     operationInterval: -1
@@ -89,7 +89,7 @@ MonoBehaviour:
     grade: 5
     attackPower: 1
     attackDistance: 3
-    criticalRate: 0.4
+    criticalRate: 0.5
     actCoolDown: 0.2
     operationTimes: 1
     operationInterval: -1
@@ -125,7 +125,7 @@ MonoBehaviour:
     grade: 1
     attackPower: 1
     attackDistance: 3
-    criticalRate: 0
+    criticalRate: 0.5
     actCoolDown: 0.2
     operationTimes: 1
     operationInterval: -1
@@ -143,7 +143,7 @@ MonoBehaviour:
     grade: 2
     attackPower: 1
     attackDistance: 3
-    criticalRate: 0.1
+    criticalRate: 0.5
     actCoolDown: 0.2
     operationTimes: 1
     operationInterval: -1
@@ -161,7 +161,7 @@ MonoBehaviour:
     grade: 3
     attackPower: 1
     attackDistance: 3
-    criticalRate: 0.2
+    criticalRate: 0.5
     actCoolDown: 0.2
     operationTimes: 1
     operationInterval: -1
@@ -179,7 +179,7 @@ MonoBehaviour:
     grade: 4
     attackPower: 1
     attackDistance: 3
-    criticalRate: 0.3
+    criticalRate: 0.5
     actCoolDown: 0.2
     operationTimes: 1
     operationInterval: -1
@@ -197,7 +197,7 @@ MonoBehaviour:
     grade: 5
     attackPower: 1
     attackDistance: 3
-    criticalRate: 0.4
+    criticalRate: 0.5
     actCoolDown: 0.2
     operationTimes: 1
     operationInterval: -1
@@ -233,7 +233,7 @@ MonoBehaviour:
     grade: 1
     attackPower: 1
     attackDistance: 3
-    criticalRate: 0
+    criticalRate: 0.5
     actCoolDown: 0.2
     operationTimes: 1
     operationInterval: -1
@@ -251,7 +251,7 @@ MonoBehaviour:
     grade: 2
     attackPower: 1
     attackDistance: 3
-    criticalRate: 0.1
+    criticalRate: 0.5
     actCoolDown: 0.2
     operationTimes: 1
     operationInterval: -1
@@ -269,7 +269,7 @@ MonoBehaviour:
     grade: 3
     attackPower: 1
     attackDistance: 3
-    criticalRate: 0.2
+    criticalRate: 0.5
     actCoolDown: 0.2
     operationTimes: 1
     operationInterval: -1
@@ -287,7 +287,7 @@ MonoBehaviour:
     grade: 4
     attackPower: 1
     attackDistance: 3
-    criticalRate: 0.3
+    criticalRate: 0.5
     actCoolDown: 0.2
     operationTimes: 1
     operationInterval: -1
@@ -305,7 +305,7 @@ MonoBehaviour:
     grade: 5
     attackPower: 1
     attackDistance: 3
-    criticalRate: 0.4
+    criticalRate: 0.5
     actCoolDown: 0.2
     operationTimes: 1
     operationInterval: -1
@@ -341,7 +341,7 @@ MonoBehaviour:
     grade: 1
     attackPower: 1
     attackDistance: 3
-    criticalRate: 0
+    criticalRate: 0.5
     actCoolDown: 0.2
     operationTimes: 1
     operationInterval: -1
@@ -359,7 +359,7 @@ MonoBehaviour:
     grade: 2
     attackPower: 1
     attackDistance: 3
-    criticalRate: 0.1
+    criticalRate: 0.5
     actCoolDown: 0.2
     operationTimes: 1
     operationInterval: -1
@@ -377,7 +377,7 @@ MonoBehaviour:
     grade: 3
     attackPower: 1
     attackDistance: 3
-    criticalRate: 0.2
+    criticalRate: 0.5
     actCoolDown: 0.2
     operationTimes: 1
     operationInterval: -1
@@ -395,7 +395,7 @@ MonoBehaviour:
     grade: 4
     attackPower: 1
     attackDistance: 3
-    criticalRate: 0.3
+    criticalRate: 0.5
     actCoolDown: 0.2
     operationTimes: 1
     operationInterval: -1
@@ -413,7 +413,7 @@ MonoBehaviour:
     grade: 5
     attackPower: 1
     attackDistance: 3
-    criticalRate: 0.4
+    criticalRate: 0.5
     actCoolDown: 0.2
     operationTimes: 1
     operationInterval: -1
@@ -449,7 +449,7 @@ MonoBehaviour:
     grade: 1
     attackPower: 1
     attackDistance: 3
-    criticalRate: 0
+    criticalRate: 0.5
     actCoolDown: 0.2
     operationTimes: 1
     operationInterval: -1
@@ -467,7 +467,7 @@ MonoBehaviour:
     grade: 2
     attackPower: 1
     attackDistance: 3
-    criticalRate: 0.1
+    criticalRate: 0.5
     actCoolDown: 0.2
     operationTimes: 1
     operationInterval: -1
@@ -485,7 +485,7 @@ MonoBehaviour:
     grade: 3
     attackPower: 1
     attackDistance: 3
-    criticalRate: 0.2
+    criticalRate: 0.5
     actCoolDown: 0.2
     operationTimes: 1
     operationInterval: -1
@@ -503,7 +503,7 @@ MonoBehaviour:
     grade: 4
     attackPower: 1
     attackDistance: 3
-    criticalRate: 0.3
+    criticalRate: 0.5
     actCoolDown: 0.2
     operationTimes: 1
     operationInterval: -1
@@ -521,7 +521,7 @@ MonoBehaviour:
     grade: 5
     attackPower: 1
     attackDistance: 3
-    criticalRate: 0.4
+    criticalRate: 0.5
     actCoolDown: 0.2
     operationTimes: 1
     operationInterval: -1
@@ -557,7 +557,7 @@ MonoBehaviour:
     grade: 1
     attackPower: 1
     attackDistance: 3
-    criticalRate: 0
+    criticalRate: 0.5
     actCoolDown: 0.2
     operationTimes: 1
     operationInterval: -1
@@ -575,7 +575,7 @@ MonoBehaviour:
     grade: 2
     attackPower: 1
     attackDistance: 3
-    criticalRate: 0.1
+    criticalRate: 0.5
     actCoolDown: 0.2
     operationTimes: 1
     operationInterval: -1
@@ -593,7 +593,7 @@ MonoBehaviour:
     grade: 3
     attackPower: 1
     attackDistance: 3
-    criticalRate: 0.2
+    criticalRate: 0.5
     actCoolDown: 0.2
     operationTimes: 1
     operationInterval: -1
@@ -611,7 +611,7 @@ MonoBehaviour:
     grade: 4
     attackPower: 1
     attackDistance: 3
-    criticalRate: 0.3
+    criticalRate: 0.5
     actCoolDown: 0.2
     operationTimes: 1
     operationInterval: -1
@@ -629,7 +629,7 @@ MonoBehaviour:
     grade: 5
     attackPower: 1
     attackDistance: 3
-    criticalRate: 0.4
+    criticalRate: 0.5
     actCoolDown: 0.2
     operationTimes: 1
     operationInterval: -1
