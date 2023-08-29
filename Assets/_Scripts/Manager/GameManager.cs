@@ -13,7 +13,7 @@ public class GameManager : SingletonComponent<GameManager>
     bool _loading = true;
     new private async void Awake()
     {
-        // AllLayer.Initialize();
+        AllLayer.Initialize();
 
         Application.targetFrameRate = 60;
         //데이터 테이블,데이터 베이스 초기화

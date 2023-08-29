@@ -236,10 +236,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4199140336388663853}
   - component: {fileID: 4199140336395786127}
-  - component: {fileID: 1888730974341642587}
-  - component: {fileID: -1933797647115944672}
+  - component: {fileID: 8991028678930892323}
+  - component: {fileID: -4556008601918728464}
   m_Layer: 0
-  m_Name: Tower_A
+  m_Name: Tower_E
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -282,7 +282,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
---- !u!114 &1888730974341642587
+--- !u!114 &8991028678930892323
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -307,8 +307,8 @@ MonoBehaviour:
     objectMultipleAngle: 0
     penetrationCount: 0
     values: []
-  recycleObject: {fileID: -1933797647115944672}
---- !u!114 &-1933797647115944672
+  recycleObject: {fileID: -4556008601918728464}
+--- !u!114 &-4556008601918728464
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -320,7 +320,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b5202b171eaf4824bbf4174a79cd646, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: Tower_A
+  id: Tower_E
   poolSize: 5
 --- !u!1 &4199140336388393859
 GameObject:
@@ -406,7 +406,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5fa35ee129f1a08408d1e88638e64b8e, type: 2}
+  - {fileID: 2100000, guid: 1962b4c1ae1d3dd4b94b44fc318bdb91, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

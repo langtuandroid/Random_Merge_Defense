@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Tower
+  m_EditorClassIdentifier: 
+  m_GroupName: Tower
+  m_Data:
+    m_SerializedData: []
+  m_GUID: a0de90dac5f7f694e9553e83d07c7743
+  m_SerializeEntries:
+  - m_GUID: 1dec66eec723db14d8aafdd94a5c42ed
+    m_Address: Tower_A
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Tower
+  - m_GUID: 0f29a88312c4ee94d95ceff18252b6b8
+    m_Address: Tower_F
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Tower
+  - m_GUID: 5e0ba85eea520524fa102175203021a2
+    m_Address: Tower_E
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Tower
+  - m_GUID: fc7412539889537429daf00549bb233e
+    m_Address: Tower_D
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Tower
+  - m_GUID: bbdabf77f3e7c25409a1133a44d65bcf
+    m_Address: Tower_C
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Tower
+  - m_GUID: 3266fb35ea8f95647988fbaa8d73a2fc
+    m_Address: Tower_B
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Tower
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 810047e11ab25e74c8917d7a7d217414, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: d7b0c577ff4456243bd19b8c792651fb, type: 2}
+    - {fileID: 11400000, guid: bddc3be76ee3da04398a5ba7c8d6acb8, type: 2}

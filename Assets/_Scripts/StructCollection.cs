@@ -88,19 +88,19 @@ public struct TowerData
     public int PenetrationCount => penetrationCount;
     public float[] Values => values;
 
-    private string towerId;
-    private string abilityId;
-    private float attackPower;
-    private float attackDistance;
-    private float criticalRate;
-    private float actCoolDown;
-    private int operationTimes;
-    private float operationInterval;
-    private float objectMultiple;
-    private float objectMultipleAngle;
-    private int penetrationCount;
-    private float[] values;
-    private InGameTowerUpgrade inGameTowerUpgrade;
+    [SerializeField] private string towerId;
+    [SerializeField] private string abilityId;
+    [SerializeField] private float attackPower;
+    [SerializeField] private float attackDistance;
+    [SerializeField] private float criticalRate;
+    [SerializeField] private float actCoolDown;
+    [SerializeField] private int operationTimes;
+    [SerializeField] private float operationInterval;
+    [SerializeField] private float objectMultiple;
+    [SerializeField] private float objectMultipleAngle;
+    [SerializeField] private int penetrationCount;
+    [SerializeField] private float[] values;
+    [SerializeField] private InGameTowerUpgrade inGameTowerUpgrade;
     public TowerData(string towerId, string abilityId, float attackPower, float attackDistance, float criticalRate, float actCoolDown, int operationTimes, float operationInterval, float objectMultiple, float objectMultipleAngle, int penetrationCount, float[] values, InGameTowerUpgrade inGameTowerUpgrade)
     {
         this.towerId = towerId;

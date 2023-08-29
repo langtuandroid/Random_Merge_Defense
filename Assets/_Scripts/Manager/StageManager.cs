@@ -32,9 +32,17 @@ public class StageManager : SingletonComponent<StageManager>
         }
 
 
+        var inGameData = DataManager.Database.InGameDataLayer.GetData();
+        if (inGameData == null)
+        {
+            inGameData = new SaveData.InGameData();
+
+            DataManager.Database.InGameDataLayer.SetData(inGameData);
+        }
         waveManager.Initialize(stageData.currentStageId, stageData.currentWaveOrder);
         InGameUI.Instance.Initialize();
         InGame_TowerUpgradeManager.Instance.Initialize();
+        TowerManager.Instance.Initialize();
     }
     public void Fail()
     {

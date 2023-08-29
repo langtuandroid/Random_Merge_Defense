@@ -38,7 +38,7 @@ public class TowerRecycleSystem
             if (Id == enemys[i].id)
             {
                 TowerController towerController = enemys[i].factory.Get().GetComponent<TowerController>();
-                towerController.transform.SetPositionAndRotation(pos, Quaternion.Euler(Vector3.back));
+                towerController.transform.SetPositionAndRotation(pos, Quaternion.Euler(0, 180, 0));
                 return towerController;
             }
         }

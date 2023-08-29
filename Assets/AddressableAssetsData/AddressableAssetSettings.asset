@@ -46,6 +46,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 36f179f9c7623764aa3681b0a86ae10e, type: 2}
   - {fileID: 11400000, guid: ab2c920780f8a4b4fa967019fd4afcdd, type: 2}
   - {fileID: 11400000, guid: ad387d4be3e62f944874eda911f74016, type: 2}
+  - {fileID: 11400000, guid: 1002e7f5e1874ad46a66a885e0138792, type: 2}
   m_BuildSettings:
     m_CompileScriptsInVirtualMode: 0
     m_CleanupStreamingAssetsAfterBuilds: 1
@@ -92,6 +93,7 @@ MonoBehaviour:
     - RecycleParticle
     - Image
     - Enemy
+    - Tower
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: f7c9b4233d0395b4389108ab02e4abfa, type: 2}

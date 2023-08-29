@@ -4,20 +4,10 @@ using UnityEngine;
 
 public class SeatTileList : SingletonComponent<SeatTileList>
 {
+    public SeatTile[] SeatTiles => seatTiles;
     [SerializeField] SeatTile[] seatTiles;
     public void Initialize()
     {
-        List<SeatData> seatData = DataManager.Database.InGameDataLayer.GetData().seatDatas;
-        for (int i = 0; i < seatData.Count; i++)
-        {
-            for (int j = 0; j < seatTiles.Length; j++)
-            {
-                if (seatData[i].seatId == seatTiles[j].SeatId)
-                {
-                    seatTiles[j].FillTower(seatData[i].towerId, seatData[i].abilityId);
-                }
-            }
-        }
 
     }
 
