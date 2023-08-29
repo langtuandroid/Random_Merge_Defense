@@ -12,6 +12,8 @@ public class TowerManager : SingletonComponent<TowerManager>
     [SerializeField] float doubleClickTimer = 0;
     [SerializeField] int doubleClickCheckCount;
     SeatTile clickedSeat;
+    SeatTile clickedFilledSeat;
+    bool onClickFilledSeat;
     public void Initialize()
     {
         towerBuildingSystem = GetComponentInChildren<TowerBuildingSystem>();
@@ -19,6 +21,8 @@ public class TowerManager : SingletonComponent<TowerManager>
         doubleClickCheckCount = 0;
 
         towerBuildingSystem.Initialize();
+
+        onClickFilledSeat = false;
     }
     private void Update()
     {
@@ -31,6 +35,11 @@ public class TowerManager : SingletonComponent<TowerManager>
                 SeatTile tempSeatTile = hitSeat.transform.GetComponent<SeatTile>();
                 if (!tempSeatTile.Filled)
                 {
+                    if (onClickFilledSeat)
+                    {
+                        clickedFilledSeat.TowerController.OffAttackRangeVisual();
+                    }
+                    onClickFilledSeat = false;
                     doubleClickCheckCount++;
                     if (doubleClickCheckCount == 1)
                     {
@@ -47,6 +56,30 @@ public class TowerManager : SingletonComponent<TowerManager>
                         }
                     }
                 }
+                else
+                {
+                    doubleClickCheckCount++;
+                    if (doubleClickCheckCount == 1)
+                    {
+
+                        if (onClickFilledSeat)
+                        {
+                            clickedFilledSeat.TowerController.OffAttackRangeVisual();
+                        }
+                        onClickFilledSeat = true;
+                        clickedFilledSeat = tempSeatTile;
+                        clickedFilledSeat.TowerController.OnAttackRangeVisual();
+                    }
+                    else if (doubleClickCheckCount == 2)
+                    {
+                        doubleClickCheckCount = 0;
+                        clickedFilledSeat.TowerController.OffAttackRangeVisual();
+                    }
+                }
+            }
+            else if (onClickFilledSeat)
+            {
+                clickedFilledSeat.TowerController.OffAttackRangeVisual();
             }
         }
         if (doubleClickCheckCount == 1)

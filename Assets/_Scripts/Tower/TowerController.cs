@@ -8,13 +8,23 @@ public class TowerController : MonoBehaviour
     [SerializeField] RecycleObject recycleObject;
     [SerializeField] TowerAttackSystem towerAttackSystem;
     TowerAnimationSystem towerAnimationSystem;
+    [SerializeField] GameObject attackRangeVisual;
     public void Initialize(TowerData towerData)
     {
         this.towerData = towerData;
         towerAnimationSystem = new TowerAnimationSystem(GetComponent<Animator>());
 
-
-        towerAttackSystem = GetComponentInChildren<TowerAttackSystem>();
         towerAttackSystem.Initialize(this.towerData, towerAnimationSystem.AttackPlay);
+
+        attackRangeVisual.transform.localScale = Vector3.one * towerData.AttackDistance * 2;
+        OffAttackRangeVisual();
+    }
+    public void OnAttackRangeVisual()
+    {
+        attackRangeVisual.gameObject.SetActive(true);
+    }
+    public void OffAttackRangeVisual()
+    {
+        attackRangeVisual.gameObject.SetActive(false);
     }
 }

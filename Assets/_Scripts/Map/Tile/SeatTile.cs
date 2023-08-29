@@ -6,6 +6,7 @@ public class SeatTile : RuleTile3D
 {
     public int SeatId => seatId;
     public bool Filled => filled;
+    public TowerController TowerController => towerController;
     [SerializeField] int seatId;
     bool filled = false;
     TowerController towerController;
