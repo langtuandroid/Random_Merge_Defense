@@ -53,12 +53,4 @@ MonoBehaviour:
     - 10053
     - 10054
     - 10055
-  - towerId: Tower_F
-    grades:
-    - 10060
-    - 10061
-    - 10062
-    - 10063
-    - 10064
-    - 10065
   maxGrade: 6
