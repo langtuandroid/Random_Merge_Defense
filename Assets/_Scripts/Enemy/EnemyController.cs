@@ -32,6 +32,7 @@ public class EnemyController : MonoBehaviour
     }
     void PlayerLifeDecrease()
     {
+        isDeath = true;
         removeEnemy.Invoke(this);
         LifeManager.Instance.LifeDecrease(enemyData.lifeDecreaseAmount);
         recycleObject.Restore();
