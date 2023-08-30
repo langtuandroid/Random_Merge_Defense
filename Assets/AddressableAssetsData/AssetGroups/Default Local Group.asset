@@ -22,11 +22,6 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - Scene
-  - m_GUID: d9b0f9779d97f144a83e9fbc37c63885
-    m_Address: Stage1
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Scene
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 810047e11ab25e74c8917d7a7d217414, type: 2}
   m_SchemaSet:
