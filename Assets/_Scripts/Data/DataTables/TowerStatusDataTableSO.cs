@@ -18,6 +18,8 @@ namespace DataTable
     public class TowerStatusDataTableSO : DataTableSO
     {
         [SerializeField] TowerStatusDataTable[] towerStatusDataTable;
+        public int MaxGrade => maxGrade;
+        [SerializeField] int maxGrade;
         public override void Read(string jsonString)
         {
 #if UNITY_EDITOR
@@ -33,6 +35,7 @@ namespace DataTable
 
             towerStatusDataTable = JsonConvert.DeserializeObject<TowerStatusDataTable[]>(jsonString);
             UnityEditor.EditorUtility.SetDirty(this);
+            maxGrade = towerStatusDataTable[0].grades.Length;
 #endif
         }
         public TowerStatusDataTable GetTowerStatusDataTable(string towerId)

@@ -5,49 +5,57 @@ using System;
 
 public class TowerManager : SingletonComponent<TowerManager>
 {
+    public enum ClickType { NotThing, FilledSeat, NotFilledSeat }
+    ClickType clickType;
     TowerBuildingSystem TowerBuildingSystem => towerBuildingSystem;
     TowerBuildingSystem towerBuildingSystem;
     new Camera camera;
     [SerializeField] float doubleClickCheckTime = 0.2f;
     [SerializeField] float doubleClickTimer = 0;
-    [SerializeField] int doubleClickCheckCount;
+    [SerializeField] int notFilledDoubleClickCheck;
+    [SerializeField] int filledDoubleClickCheck;
     SeatTile clickedSeat;
     SeatTile clickedFilledSeat;
-    bool onClickFilledSeat;
     public void Initialize()
     {
         towerBuildingSystem = GetComponentInChildren<TowerBuildingSystem>();
         camera = CameraManager.Instance.GetComponent<Camera>();
-        doubleClickCheckCount = 0;
+        notFilledDoubleClickCheck = 0;
+        filledDoubleClickCheck = 0;
 
         towerBuildingSystem.Initialize();
-
-        onClickFilledSeat = false;
     }
     private void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {
+            if (clickType == ClickType.FilledSeat)
+            {
+                clickedFilledSeat.TowerController.OffAttackRangeVisual();
+            }
             Ray ray = camera.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out var hitSeat, 100, AllLayer.SeatLayer))
             {
-                Debug.Log("히트다히트");
                 SeatTile tempSeatTile = hitSeat.transform.GetComponent<SeatTile>();
+
+                //빈 시트 클릭시
                 if (!tempSeatTile.Filled)
                 {
-                    if (onClickFilledSeat)
+                    if (clickType == ClickType.FilledSeat)
                     {
                         clickedFilledSeat.TowerController.OffAttackRangeVisual();
                     }
-                    onClickFilledSeat = false;
-                    doubleClickCheckCount++;
-                    if (doubleClickCheckCount == 1)
+                    clickType = ClickType.NotFilledSeat;
+                    filledDoubleClickCheck = 0;
+                    notFilledDoubleClickCheck++;
+                    if (notFilledDoubleClickCheck == 1)
                     {
+                        doubleClickTimer = 0;
                         clickedSeat = tempSeatTile;
                     }
-                    else if (doubleClickCheckCount == 2)
+                    else if (notFilledDoubleClickCheck == 2)
                     {
-                        doubleClickCheckCount = 0;
+                        notFilledDoubleClickCheck = 0;
                         doubleClickTimer = 0;
                         if (clickedSeat == tempSeatTile)
                         {
@@ -56,38 +64,56 @@ public class TowerManager : SingletonComponent<TowerManager>
                         }
                     }
                 }
+                //타워가 있는 시트 클릭시
                 else
                 {
-                    doubleClickCheckCount++;
-                    if (doubleClickCheckCount == 1)
+                    clickType = ClickType.FilledSeat;
+                    notFilledDoubleClickCheck = 0;
+                    filledDoubleClickCheck++;
+                    if (filledDoubleClickCheck == 1)
                     {
-
-                        if (onClickFilledSeat)
-                        {
-                            clickedFilledSeat.TowerController.OffAttackRangeVisual();
-                        }
-                        onClickFilledSeat = true;
+                        doubleClickTimer = 0;
                         clickedFilledSeat = tempSeatTile;
                         clickedFilledSeat.TowerController.OnAttackRangeVisual();
                     }
-                    else if (doubleClickCheckCount == 2)
+                    else if (filledDoubleClickCheck == 2)
                     {
-                        doubleClickCheckCount = 0;
+                        doubleClickTimer = 0;
+                        filledDoubleClickCheck = 0;
                         clickedFilledSeat.TowerController.OffAttackRangeVisual();
+                        if (clickedFilledSeat == tempSeatTile)
+                        {
+                            towerBuildingSystem.DoubleClickMerge(clickedFilledSeat);
+                        }
                     }
                 }
             }
-            else if (onClickFilledSeat)
+            //빈곳 클릭시
+            else if (clickType == ClickType.FilledSeat)
             {
+                notFilledDoubleClickCheck = 0;
+                filledDoubleClickCheck = 0;
+                clickType = ClickType.NotThing;
                 clickedFilledSeat.TowerController.OffAttackRangeVisual();
             }
         }
-        if (doubleClickCheckCount == 1)
+
+        if (notFilledDoubleClickCheck == 1)
         {
             doubleClickTimer += Time.deltaTime;
             if (doubleClickTimer >= doubleClickCheckTime)
             {
-                doubleClickCheckCount = 0;
+                notFilledDoubleClickCheck = 0;
+                doubleClickTimer = 0;
+            }
+        }
+
+        if (filledDoubleClickCheck == 1)
+        {
+            doubleClickTimer += Time.deltaTime;
+            if (doubleClickTimer >= doubleClickCheckTime)
+            {
+                filledDoubleClickCheck = 0;
                 doubleClickTimer = 0;
             }
         }

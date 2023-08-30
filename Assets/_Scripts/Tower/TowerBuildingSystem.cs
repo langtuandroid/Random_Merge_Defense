@@ -52,6 +52,27 @@ public class TowerBuildingSystem : MonoBehaviour
     {
         TowerAbilityDataTable towerAbilityDataTable = DataManager.DataTableBase.TowerAbilityDataTable.GetTowerAbilityDataTable(abilityId);
         InGameTowerUpgrade inGame_TowerUpgradeManager = InGame_TowerUpgradeManager.Instance.GetInGameTowerUpgrade(towerId);
-        return new TowerData(towerId, abilityId, towerAbilityDataTable.attackPower, towerAbilityDataTable.attackDistance, towerAbilityDataTable.criticalRate, towerAbilityDataTable.actCoolDown, towerAbilityDataTable.operationTimes, towerAbilityDataTable.operationInterval, towerAbilityDataTable.objectMultiple, towerAbilityDataTable.objectMultipleAngle, towerAbilityDataTable.penetrationCount, towerAbilityDataTable.values, inGame_TowerUpgradeManager);
+        return new TowerData(towerId, towerAbilityDataTable.grade, abilityId, towerAbilityDataTable.attackPower, towerAbilityDataTable.attackDistance, towerAbilityDataTable.criticalRate, towerAbilityDataTable.actCoolDown, towerAbilityDataTable.operationTimes, towerAbilityDataTable.operationInterval, towerAbilityDataTable.objectMultiple, towerAbilityDataTable.objectMultipleAngle, towerAbilityDataTable.penetrationCount, towerAbilityDataTable.values, inGame_TowerUpgradeManager);
+    }
+    public void DoubleClickMerge(SeatTile mergeSeat)
+    {
+        List<SeatTile> filledSeats = SeatTileList.Instance.FilledSeats;
+        for (int i = 0; i < filledSeats.Count; i++)
+        {
+            if (mergeSeat.TowerController.TowerData.Grade != DataManager.DataTableBase.TowerStatusDataTable.MaxGrade &&
+            filledSeats[i] != mergeSeat &&
+             filledSeats[i].TowerController.TowerData.TowerID == mergeSeat.TowerController.TowerData.TowerID &&
+             filledSeats[i].TowerController.TowerData.Grade == mergeSeat.TowerController.TowerData.Grade
+             )
+            {
+                TowerData mergeSeatTowerData = mergeSeat.TowerController.TowerData;
+                string nextAbilityId = DataManager.DataTableBase.TowerStatusDataTable.GetAbilityId(mergeSeatTowerData.TowerID, mergeSeatTowerData.Grade + 1);
+                Debug.Log(mergeSeatTowerData.Grade + 1);
+                filledSeats[i].DeleteTower();
+                mergeSeat.DeleteTower();
+                BuildTower(mergeSeatTowerData.TowerID, nextAbilityId, mergeSeat);
+                return;
+            }
+        }
     }
 }

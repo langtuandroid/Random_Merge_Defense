@@ -19,13 +19,15 @@ public class SeatTile : RuleTile3D
     }
     public void BuildTower(TowerController towerController)
     {
-        filled = true;
         this.towerController = towerController;
         filledSeatAdd.Invoke(this);
+        filled = true;
     }
     public void DeleteTower()
     {
+        towerController.Delete();
         notFilledSeatAdd.Invoke(this);
+        filled = false;
     }
 
 

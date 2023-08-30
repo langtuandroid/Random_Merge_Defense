@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerAbilityDataTable:
   - abilityId: 10010
-    grade: 1
+    grade: 0
     attackPower: 1
     attackDistance: 3
     criticalRate: 0.5
@@ -32,7 +32,7 @@ MonoBehaviour:
     - -1
     - -1
   - abilityId: 10011
-    grade: 2
+    grade: 1
     attackPower: 1
     attackDistance: 3
     criticalRate: 0.5
@@ -50,7 +50,7 @@ MonoBehaviour:
     - -1
     - -1
   - abilityId: 10012
-    grade: 3
+    grade: 2
     attackPower: 1
     attackDistance: 3
     criticalRate: 0.5
@@ -68,7 +68,7 @@ MonoBehaviour:
     - -1
     - -1
   - abilityId: 10013
-    grade: 4
+    grade: 3
     attackPower: 1
     attackDistance: 3
     criticalRate: 0.5
@@ -86,7 +86,7 @@ MonoBehaviour:
     - -1
     - -1
   - abilityId: 10014
-    grade: 5
+    grade: 4
     attackPower: 1
     attackDistance: 3
     criticalRate: 0.5
@@ -104,7 +104,7 @@ MonoBehaviour:
     - -1
     - -1
   - abilityId: 10015
-    grade: 6
+    grade: 5
     attackPower: 1
     attackDistance: 3
     criticalRate: 0.5
@@ -122,7 +122,7 @@ MonoBehaviour:
     - -1
     - -1
   - abilityId: 10020
-    grade: 1
+    grade: 0
     attackPower: 1
     attackDistance: 3
     criticalRate: 0.5
@@ -140,7 +140,7 @@ MonoBehaviour:
     - -1
     - -1
   - abilityId: 10021
-    grade: 2
+    grade: 1
     attackPower: 1
     attackDistance: 3
     criticalRate: 0.5
@@ -158,7 +158,7 @@ MonoBehaviour:
     - -1
     - -1
   - abilityId: 10022
-    grade: 3
+    grade: 2
     attackPower: 1
     attackDistance: 3
     criticalRate: 0.5
@@ -176,7 +176,7 @@ MonoBehaviour:
     - -1
     - -1
   - abilityId: 10023
-    grade: 4
+    grade: 3
     attackPower: 1
     attackDistance: 3
     criticalRate: 0.5
@@ -194,7 +194,7 @@ MonoBehaviour:
     - -1
     - -1
   - abilityId: 10024
-    grade: 5
+    grade: 4
     attackPower: 1
     attackDistance: 3
     criticalRate: 0.5
@@ -212,7 +212,7 @@ MonoBehaviour:
     - -1
     - -1
   - abilityId: 10025
-    grade: 6
+    grade: 5
     attackPower: 1
     attackDistance: 3
     criticalRate: 0.5
@@ -230,7 +230,7 @@ MonoBehaviour:
     - -1
     - -1
   - abilityId: 10030
-    grade: 1
+    grade: 0
     attackPower: 1
     attackDistance: 3
     criticalRate: 0.5
@@ -248,7 +248,7 @@ MonoBehaviour:
     - -1
     - -1
   - abilityId: 10031
-    grade: 2
+    grade: 1
     attackPower: 1
     attackDistance: 3
     criticalRate: 0.5
@@ -266,7 +266,7 @@ MonoBehaviour:
     - -1
     - -1
   - abilityId: 10032
-    grade: 3
+    grade: 2
     attackPower: 1
     attackDistance: 3
     criticalRate: 0.5
@@ -284,7 +284,7 @@ MonoBehaviour:
     - -1
     - -1
   - abilityId: 10033
-    grade: 4
+    grade: 3
     attackPower: 1
     attackDistance: 3
     criticalRate: 0.5
@@ -302,7 +302,7 @@ MonoBehaviour:
     - -1
     - -1
   - abilityId: 10034
-    grade: 5
+    grade: 4
     attackPower: 1
     attackDistance: 3
     criticalRate: 0.5
@@ -320,7 +320,7 @@ MonoBehaviour:
     - -1
     - -1
   - abilityId: 10035
-    grade: 6
+    grade: 5
     attackPower: 1
     attackDistance: 3
     criticalRate: 0.5
@@ -338,7 +338,7 @@ MonoBehaviour:
     - -1
     - -1
   - abilityId: 10040
-    grade: 1
+    grade: 0
     attackPower: 1
     attackDistance: 3
     criticalRate: 0.5
@@ -356,7 +356,7 @@ MonoBehaviour:
     - -1
     - -1
   - abilityId: 10041
-    grade: 2
+    grade: 1
     attackPower: 1
     attackDistance: 3
     criticalRate: 0.5
@@ -374,7 +374,7 @@ MonoBehaviour:
     - -1
     - -1
   - abilityId: 10042
-    grade: 3
+    grade: 2
     attackPower: 1
     attackDistance: 3
     criticalRate: 0.5
@@ -392,7 +392,7 @@ MonoBehaviour:
     - -1
     - -1
   - abilityId: 10043
-    grade: 4
+    grade: 3
     attackPower: 1
     attackDistance: 3
     criticalRate: 0.5
@@ -410,7 +410,7 @@ MonoBehaviour:
     - -1
     - -1
   - abilityId: 10044
-    grade: 5
+    grade: 4
     attackPower: 1
     attackDistance: 3
     criticalRate: 0.5
@@ -428,7 +428,7 @@ MonoBehaviour:
     - -1
     - -1
   - abilityId: 10045
-    grade: 6
+    grade: 5
     attackPower: 1
     attackDistance: 3
     criticalRate: 0.5
@@ -446,7 +446,7 @@ MonoBehaviour:
     - -1
     - -1
   - abilityId: 10050
-    grade: 1
+    grade: 0
     attackPower: 1
     attackDistance: 3
     criticalRate: 0.5
@@ -464,96 +464,6 @@ MonoBehaviour:
     - -1
     - -1
   - abilityId: 10051
-    grade: 2
-    attackPower: 1
-    attackDistance: 3
-    criticalRate: 0.5
-    actCoolDown: 0.2
-    operationTimes: 1
-    operationInterval: -1
-    objectMultiple: 1
-    objectMultipleAngle: -1
-    penetrationCount: -1
-    values:
-    - -1
-    - -1
-    - -1
-    - -1
-    - -1
-    - -1
-  - abilityId: 10052
-    grade: 3
-    attackPower: 1
-    attackDistance: 3
-    criticalRate: 0.5
-    actCoolDown: 0.2
-    operationTimes: 1
-    operationInterval: -1
-    objectMultiple: 1
-    objectMultipleAngle: -1
-    penetrationCount: -1
-    values:
-    - -1
-    - -1
-    - -1
-    - -1
-    - -1
-    - -1
-  - abilityId: 10053
-    grade: 4
-    attackPower: 1
-    attackDistance: 3
-    criticalRate: 0.5
-    actCoolDown: 0.2
-    operationTimes: 1
-    operationInterval: -1
-    objectMultiple: 1
-    objectMultipleAngle: -1
-    penetrationCount: -1
-    values:
-    - -1
-    - -1
-    - -1
-    - -1
-    - -1
-    - -1
-  - abilityId: 10054
-    grade: 5
-    attackPower: 1
-    attackDistance: 3
-    criticalRate: 0.5
-    actCoolDown: 0.2
-    operationTimes: 1
-    operationInterval: -1
-    objectMultiple: 1
-    objectMultipleAngle: -1
-    penetrationCount: -1
-    values:
-    - -1
-    - -1
-    - -1
-    - -1
-    - -1
-    - -1
-  - abilityId: 10055
-    grade: 6
-    attackPower: 1
-    attackDistance: 3
-    criticalRate: 0.5
-    actCoolDown: 0.2
-    operationTimes: 1
-    operationInterval: -1
-    objectMultiple: 1
-    objectMultipleAngle: -1
-    penetrationCount: -1
-    values:
-    - -1
-    - -1
-    - -1
-    - -1
-    - -1
-    - -1
-  - abilityId: 10060
     grade: 1
     attackPower: 1
     attackDistance: 3
@@ -571,7 +481,7 @@ MonoBehaviour:
     - -1
     - -1
     - -1
-  - abilityId: 10061
+  - abilityId: 10052
     grade: 2
     attackPower: 1
     attackDistance: 3
@@ -589,7 +499,7 @@ MonoBehaviour:
     - -1
     - -1
     - -1
-  - abilityId: 10062
+  - abilityId: 10053
     grade: 3
     attackPower: 1
     attackDistance: 3
@@ -607,7 +517,7 @@ MonoBehaviour:
     - -1
     - -1
     - -1
-  - abilityId: 10063
+  - abilityId: 10054
     grade: 4
     attackPower: 1
     attackDistance: 3
@@ -625,7 +535,7 @@ MonoBehaviour:
     - -1
     - -1
     - -1
-  - abilityId: 10064
+  - abilityId: 10055
     grade: 5
     attackPower: 1
     attackDistance: 3
@@ -643,8 +553,98 @@ MonoBehaviour:
     - -1
     - -1
     - -1
+  - abilityId: 10060
+    grade: 0
+    attackPower: 1
+    attackDistance: 3
+    criticalRate: 0.5
+    actCoolDown: 0.2
+    operationTimes: 1
+    operationInterval: -1
+    objectMultiple: 1
+    objectMultipleAngle: -1
+    penetrationCount: -1
+    values:
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+  - abilityId: 10061
+    grade: 1
+    attackPower: 1
+    attackDistance: 3
+    criticalRate: 0.5
+    actCoolDown: 0.2
+    operationTimes: 1
+    operationInterval: -1
+    objectMultiple: 1
+    objectMultipleAngle: -1
+    penetrationCount: -1
+    values:
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+  - abilityId: 10062
+    grade: 2
+    attackPower: 1
+    attackDistance: 3
+    criticalRate: 0.5
+    actCoolDown: 0.2
+    operationTimes: 1
+    operationInterval: -1
+    objectMultiple: 1
+    objectMultipleAngle: -1
+    penetrationCount: -1
+    values:
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+  - abilityId: 10063
+    grade: 3
+    attackPower: 1
+    attackDistance: 3
+    criticalRate: 0.5
+    actCoolDown: 0.2
+    operationTimes: 1
+    operationInterval: -1
+    objectMultiple: 1
+    objectMultipleAngle: -1
+    penetrationCount: -1
+    values:
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+  - abilityId: 10064
+    grade: 4
+    attackPower: 1
+    attackDistance: 3
+    criticalRate: 0.5
+    actCoolDown: 0.2
+    operationTimes: 1
+    operationInterval: -1
+    objectMultiple: 1
+    objectMultipleAngle: -1
+    penetrationCount: -1
+    values:
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
+    - -1
   - abilityId: 10065
-    grade: 6
+    grade: 5
     attackPower: 1
     attackDistance: 3
     criticalRate: 0.5

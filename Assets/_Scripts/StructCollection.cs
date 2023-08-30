@@ -80,6 +80,7 @@ public struct EnemyData
 public struct TowerData
 {
     public string TowerID => towerId;
+    public int Grade => grade;
     public string AbilityId => abilityId;
     public float AttackPower => attackPower * inGameTowerUpgrade.UpgradeValue;
     public float CriticalAttackPower => AttackPower * 2;
@@ -94,6 +95,7 @@ public struct TowerData
     public float[] Values => values;
 
     [SerializeField] private string towerId;
+    [SerializeField] private int grade;
     [SerializeField] private string abilityId;
     [SerializeField] private float attackPower;
     [SerializeField] private float attackDistance;
@@ -106,9 +108,10 @@ public struct TowerData
     [SerializeField] private int penetrationCount;
     [SerializeField] private float[] values;
     [SerializeField] private InGameTowerUpgrade inGameTowerUpgrade;
-    public TowerData(string towerId, string abilityId, float attackPower, float attackDistance, float criticalRate, float actCoolDown, int operationTimes, float operationInterval, float objectMultiple, float objectMultipleAngle, int penetrationCount, float[] values, InGameTowerUpgrade inGameTowerUpgrade)
+    public TowerData(string towerId, int grade, string abilityId, float attackPower, float attackDistance, float criticalRate, float actCoolDown, int operationTimes, float operationInterval, float objectMultiple, float objectMultipleAngle, int penetrationCount, float[] values, InGameTowerUpgrade inGameTowerUpgrade)
     {
         this.towerId = towerId;
+        this.grade = grade;
         this.abilityId = abilityId;
         this.attackPower = attackPower;
         this.attackDistance = attackDistance;
