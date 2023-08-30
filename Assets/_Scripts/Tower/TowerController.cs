@@ -36,4 +36,11 @@ public class TowerController : MonoBehaviour
     {
         recycleObject.Restore();
     }
+    public void DragSet(float attackDistance)
+    {
+        OnAttackRangeVisual();
+        attackRangeVisual.transform.localScale = Vector3.one * attackDistance * 2;
+        gradeText.enabled = false;
+        towerAttackSystem.DragSet();
+    }
 }

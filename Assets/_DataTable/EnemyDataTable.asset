@@ -16,35 +16,35 @@ MonoBehaviour:
   - enemyId: a
     moveSpeed: 1
     rotateSpeed: 1
-    hp: 10
+    hp: 500
     hpGrowth: 0.25
     spawnInterval: 1
     lifeDecreaseAmount: 1
   - enemyId: b
-    moveSpeed: 2
+    moveSpeed: 1
     rotateSpeed: 2
-    hp: 10
+    hp: 500
     hpGrowth: 0.25
     spawnInterval: 1
     lifeDecreaseAmount: 1
   - enemyId: c
-    moveSpeed: 3
+    moveSpeed: 1
     rotateSpeed: 3
-    hp: 10
+    hp: 500
     hpGrowth: 0.25
     spawnInterval: 0.2
     lifeDecreaseAmount: 1
   - enemyId: d
-    moveSpeed: 4
+    moveSpeed: 1
     rotateSpeed: 4
-    hp: 10
+    hp: 500
     hpGrowth: 0.25
     spawnInterval: 0.2
     lifeDecreaseAmount: 1
   - enemyId: e
-    moveSpeed: 5
+    moveSpeed: 1
     rotateSpeed: 5
-    hp: 10
+    hp: 500
     hpGrowth: 0.25
     spawnInterval: 0.2
     lifeDecreaseAmount: 1

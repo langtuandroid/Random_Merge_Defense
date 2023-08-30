@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.AI;
 
 public class TowerManager : SingletonComponent<TowerManager>
 {
@@ -16,6 +17,12 @@ public class TowerManager : SingletonComponent<TowerManager>
     [SerializeField] int filledDoubleClickCheck;
     SeatTile clickedSeat;
     SeatTile clickedFilledSeat;
+    Ray ray;
+    RaycastHit hitSeat;
+    TowerController dragingTower;
+    bool onDrag;
+    Vector3 touchPosition;
+    [SerializeField] float dragCheckDistance = 1;
     public void Initialize()
     {
         towerBuildingSystem = GetComponentInChildren<TowerBuildingSystem>();
@@ -29,12 +36,13 @@ public class TowerManager : SingletonComponent<TowerManager>
     {
         if (Input.GetMouseButtonDown(0))
         {
+            touchPosition = Input.mousePosition;
             if (clickType == ClickType.FilledSeat)
             {
                 clickedFilledSeat.TowerController.OffAttackRangeVisual();
             }
-            Ray ray = camera.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out var hitSeat, 100, AllLayer.SeatLayer))
+            ray = camera.ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(ray, out hitSeat, 100, AllLayer.SeatLayer))
             {
                 SeatTile tempSeatTile = hitSeat.transform.GetComponent<SeatTile>();
 
@@ -81,6 +89,7 @@ public class TowerManager : SingletonComponent<TowerManager>
                         doubleClickTimer = 0;
                         filledDoubleClickCheck = 0;
                         clickedFilledSeat.TowerController.OffAttackRangeVisual();
+                        clickType = ClickType.NotThing;
                         if (clickedFilledSeat == tempSeatTile)
                         {
                             towerBuildingSystem.DoubleClickMerge(clickedFilledSeat);
@@ -93,9 +102,48 @@ public class TowerManager : SingletonComponent<TowerManager>
             {
                 notFilledDoubleClickCheck = 0;
                 filledDoubleClickCheck = 0;
-                clickType = ClickType.NotThing;
                 clickedFilledSeat.TowerController.OffAttackRangeVisual();
             }
+        }
+        //드래그
+        else if (Input.GetMouseButton(0))
+        {
+            if (clickType == ClickType.FilledSeat)
+            {
+                if (!onDrag)
+                {
+                    if ((touchPosition - Input.mousePosition).magnitude >= dragCheckDistance)
+                    {
+                        clickedFilledSeat.TowerController.OffAttackRangeVisual();
+                        dragingTower = FactoryManager.Instance.GetTower(clickedFilledSeat.TowerController.TowerData.TowerID, Vector3.one * 999);
+                        dragingTower.DragSet(clickedFilledSeat.TowerController.TowerData.AttackDistance);
+                        onDrag = true;
+                    }
+                }
+                else
+                {
+                    ray = camera.ScreenPointToRay(Input.mousePosition);
+                    if (Physics.Raycast(ray, out hitSeat, 100, AllLayer.DragPointLayer))
+                    {
+                        dragingTower.transform.position = hitSeat.point;
+                    }
+                }
+            }
+        }
+        else if (Input.GetMouseButtonUp(0))
+        {
+            if (clickType == ClickType.FilledSeat && onDrag)
+            {
+                dragingTower.Delete();
+                ray = camera.ScreenPointToRay(Input.mousePosition);
+                if (Physics.Raycast(ray, out hitSeat, 100, AllLayer.SeatLayer))
+                {
+                    SeatTile mergeSeat = hitSeat.transform.GetComponent<SeatTile>();
+                    towerBuildingSystem.DragMerge(mergeSeat, clickedFilledSeat);
+                }
+            }
+            clickType = ClickType.NotThing;
+            onDrag = false;
         }
 
         if (notFilledDoubleClickCheck == 1)

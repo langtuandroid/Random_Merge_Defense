@@ -22,11 +22,6 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - Tower
-  - m_GUID: 0f29a88312c4ee94d95ceff18252b6b8
-    m_Address: Tower_F
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Tower
   - m_GUID: 5e0ba85eea520524fa102175203021a2
     m_Address: Tower_E
     m_ReadOnly: 0

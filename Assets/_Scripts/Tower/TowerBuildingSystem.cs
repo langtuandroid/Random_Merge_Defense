@@ -75,4 +75,23 @@ public class TowerBuildingSystem : MonoBehaviour
             }
         }
     }
+    public void DragMerge(SeatTile mergeSeat, SeatTile dragedSeat)
+    {
+
+        if (mergeSeat.Filled &&
+        mergeSeat.TowerController.TowerData.Grade != DataManager.DataTableBase.TowerStatusDataTable.MaxGrade &&
+                   dragedSeat != mergeSeat &&
+                    dragedSeat.TowerController.TowerData.TowerID == mergeSeat.TowerController.TowerData.TowerID &&
+                    dragedSeat.TowerController.TowerData.Grade == mergeSeat.TowerController.TowerData.Grade
+        )
+        {
+            TowerData mergeSeatTowerData = mergeSeat.TowerController.TowerData;
+            string nextAbilityId = DataManager.DataTableBase.TowerStatusDataTable.GetAbilityId(mergeSeatTowerData.TowerID, mergeSeatTowerData.Grade + 1);
+            Debug.Log(mergeSeatTowerData.Grade + 1);
+            dragedSeat.DeleteTower();
+            mergeSeat.DeleteTower();
+            BuildTower(mergeSeatTowerData.TowerID, nextAbilityId, mergeSeat);
+            return;
+        }
+    }
 }

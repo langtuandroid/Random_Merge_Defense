@@ -15,10 +15,11 @@ public abstract class TowerAttackSystem : MonoBehaviour
     protected bool critical => towerData.CriticalRate <= Random.value ? true : false;
     public void Initialize(TowerData towerData, System.Action attackAnimation)
     {
+        attackDetectCollider.enabled = true;
         attackDetectCollider.radius = towerData.AttackDistance;
 
         enemyControllers.Clear();
-
+        parentRigid.transform.localRotation = Quaternion.identity;
         this.attackAnimation = attackAnimation;
         this.towerData = towerData;
         _attackCo = AttackCo();
@@ -76,6 +77,8 @@ public abstract class TowerAttackSystem : MonoBehaviour
         enemyControllers = enemyControllers.OrderBy(x => x.Order).ToList();
     }
     protected abstract void Attack(int attackCount);
+
+
     private void OnTriggerEnter(Collider other)
     {
         enemyControllers.Add(other.GetComponent<EnemyController>());
@@ -83,5 +86,11 @@ public abstract class TowerAttackSystem : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         enemyControllers.Remove(other.GetComponent<EnemyController>());
+    }
+    public void DragSet()
+    {
+        parentRigid.transform.localRotation = Quaternion.identity;
+        enemyControllers.Clear();
+        attackDetectCollider.enabled = false;
     }
 }
