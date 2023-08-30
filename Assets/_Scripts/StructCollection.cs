@@ -21,6 +21,7 @@ namespace SaveData
     public class InGameData
     {
         public int goldAmount;
+        public int towerBuildCount;
         public List<InGameTowerUpgrade> inGameTowerUpgrades = new List<InGameTowerUpgrade>();
         public List<SeatData> seatDatas = new List<SeatData>();
     }
@@ -40,13 +41,13 @@ public class InGameTowerUpgrade
     public int upgradeLevel;
     public float value;
     public float UpgradeValue => 1 + (value * upgradeLevel);
-    public int goldIncrease;
-    public InGameTowerUpgrade(string towerId, int upgradeLevel, float value, int goldIncrease)
+    public int requiredGold;
+    public InGameTowerUpgrade(string towerId, int upgradeLevel, float value, int requiredGold0)
     {
         this.towerId = towerId;
         this.upgradeLevel = upgradeLevel;
         this.value = value;
-        this.goldIncrease = goldIncrease;
+        this.requiredGold = requiredGold0;
     }
     public void Upgrade()
     {

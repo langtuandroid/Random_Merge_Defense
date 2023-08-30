@@ -2,13 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography;
+using SaveData;
 using UnityEngine;
 public class TowerBuildingSystem : MonoBehaviour
 {
+    InGameData inGameDataLayer;
     public void Initialize()
     {
+        inGameDataLayer = DataManager.Database.InGameDataLayer.GetData();
         SeatTile[] seatTiles = SeatTileList.Instance.SeatTiles;
-        List<SeatData> seatData = DataManager.Database.InGameDataLayer.GetData().seatDatas;
+        List<SeatData> seatData = inGameDataLayer.seatDatas;
         for (int i = 0; i < seatData.Count; i++)
         {
             for (int j = 0; j < seatTiles.Length; j++)
@@ -19,6 +22,9 @@ public class TowerBuildingSystem : MonoBehaviour
                 }
             }
         }
+
+        int gold = TowerManager.Instance.GoldIncrease * (inGameDataLayer.towerBuildCount + 1);
+        InGameUI.Instance.BuildUI.UpdateText(gold);
     }
 
 
@@ -44,9 +50,14 @@ public class TowerBuildingSystem : MonoBehaviour
 
     void BuildTower(string towerId, string abilityId, SeatTile seatTile)
     {
+        GoldManager.Instance.DecreaseGold(TowerManager.Instance.GoldIncrease * (inGameDataLayer.towerBuildCount + 1));
+        inGameDataLayer.towerBuildCount++;
         TowerController towerController = FactoryManager.Instance.GetTower(towerId, seatTile.transform.position);
         towerController.Initialize(SetTowerData(towerId, abilityId));
         seatTile.BuildTower(towerController);
+        InGameUI.Instance.BuildUI.UpdateText(TowerManager.Instance.GoldIncrease * (inGameDataLayer.towerBuildCount + 1));
+
+
     }
     TowerData SetTowerData(string towerId, string abilityId)
     {

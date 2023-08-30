@@ -31,11 +31,16 @@ public class SeatTile : RuleTile3D
     }
     public void ChangeTower(TowerController towerController)
     {
+        filled = true;
         this.towerController = towerController;
         towerController.transform.position = transform.position;
     }
-
-
+    public void MoveTower()
+    {
+        towerController = null;
+        notFilledSeatAdd.Invoke(this);
+        filled = false;
+    }
 
 
 

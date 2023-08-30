@@ -6,11 +6,13 @@ using UnityEngine.AI;
 
 public class TowerManager : SingletonComponent<TowerManager>
 {
-    public enum ClickType { NotThing, FilledSeat, NotFilledSeat }
+    public enum ClickType { NotThing, FilledSeat, NotFilledSeat, Drag }
     ClickType clickType;
     TowerBuildingSystem TowerBuildingSystem => towerBuildingSystem;
     TowerBuildingSystem towerBuildingSystem;
     new Camera camera;
+    public int GoldIncrease => goldIncrease;
+    [SerializeField] int goldIncrease = 10;
     [SerializeField] float doubleClickCheckTime = 0.2f;
     [SerializeField] float doubleClickTimer = 0;
     [SerializeField] int notFilledDoubleClickCheck;
@@ -49,10 +51,6 @@ public class TowerManager : SingletonComponent<TowerManager>
                 //빈 시트 클릭시
                 if (!tempSeatTile.Filled)
                 {
-                    if (clickType == ClickType.FilledSeat)
-                    {
-                        clickedFilledSeat.TowerController.OffAttackRangeVisual();
-                    }
                     clickType = ClickType.NotFilledSeat;
                     filledDoubleClickCheck = 0;
                     notFilledDoubleClickCheck++;
@@ -141,15 +139,22 @@ public class TowerManager : SingletonComponent<TowerManager>
                     SeatTile mergeSeat = hitSeat.transform.GetComponent<SeatTile>();
                     if (!towerBuildingSystem.DragMerge(mergeSeat, clickedFilledSeat))
                     {
-                        TowerController tower1 = mergeSeat.TowerController;
-                        TowerController tower2 = clickedFilledSeat.TowerController;
-                        mergeSeat.ChangeTower(tower2);
-                        clickedFilledSeat.ChangeTower(tower1);
-
+                        if (mergeSeat.Filled)
+                        {
+                            TowerController tower1 = mergeSeat.TowerController;
+                            TowerController tower2 = clickedFilledSeat.TowerController;
+                            mergeSeat.ChangeTower(tower2);
+                            clickedFilledSeat.ChangeTower(tower1);
+                        }
+                        else
+                        {
+                            mergeSeat.ChangeTower(clickedFilledSeat.TowerController);
+                            clickedFilledSeat.MoveTower();
+                        }
                     }
+                    clickType = ClickType.NotThing;
                 }
             }
-            clickType = ClickType.NotThing;
             onDrag = false;
         }
 

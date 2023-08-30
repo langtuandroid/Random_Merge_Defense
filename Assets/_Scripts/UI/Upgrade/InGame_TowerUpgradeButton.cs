@@ -28,7 +28,7 @@ public class InGame_TowerUpgradeButton : MonoBehaviour
     }
     void SetNextUpgradeInfo()
     {
-        int goldAmount = InGame_TowerUpgradeManager.Instance.RequiredInitialGold + (inGameTowerUpgrade.upgradeLevel * inGameTowerUpgrade.goldIncrease);
+        int goldAmount = nextUpgradeInfo.goldAmount + ((inGameTowerUpgrade.upgradeLevel + 1) * inGameTowerUpgrade.requiredGold);
         nextUpgradeInfo = new NextUpgradeInfo(goldAmount, inGameTowerUpgrade.upgradeLevel);
         text.text = string.Format($"{inGameTowerUpgrade.towerId} : {nextUpgradeInfo.level}\n gold = {nextUpgradeInfo.goldAmount}");
     }

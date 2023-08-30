@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class GoldManager : SingletonComponent<GoldManager>
 {
+    public int GoldAmount => inGameData.goldAmount;
     InGameData inGameData;
     public void Initialize()
     {

@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class InGame_TowerUpgradeManager : SingletonComponent<InGame_TowerUpgradeManager>
 {
-    public int RequiredInitialGold => requiredInitialGold;
-    [SerializeField] int requiredInitialGold;
     List<InGameTowerUpgrade> inGameTowerUpgrades = new List<InGameTowerUpgrade>();
     public void Initialize()
     {

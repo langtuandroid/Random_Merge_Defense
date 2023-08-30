@@ -20,7 +20,6 @@ public class EnemySpawnManager : SingletonComponent<EnemySpawnManager>
     float groupSpawnIntervalTimer;
     float waveIntervalTimer;
 
-
     public void Initialize(int stageId, int currentWaveOrder)
     {
         this.currentWaveOrder = currentWaveOrder;
