@@ -75,7 +75,7 @@ public class TowerBuildingSystem : MonoBehaviour
             }
         }
     }
-    public void DragMerge(SeatTile mergeSeat, SeatTile dragedSeat)
+    public bool DragMerge(SeatTile mergeSeat, SeatTile dragedSeat)
     {
 
         if (mergeSeat.Filled &&
@@ -91,7 +91,8 @@ public class TowerBuildingSystem : MonoBehaviour
             dragedSeat.DeleteTower();
             mergeSeat.DeleteTower();
             BuildTower(mergeSeatTowerData.TowerID, nextAbilityId, mergeSeat);
-            return;
+            return true;
         }
+        return false;
     }
 }

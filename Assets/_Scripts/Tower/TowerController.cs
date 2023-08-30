@@ -21,6 +21,7 @@ public class TowerController : MonoBehaviour
 
         attackRangeVisual.transform.localScale = Vector3.one * towerData.AttackDistance * 2;
         OffAttackRangeVisual();
+        gradeText.enabled = true;
         gradeText.text = string.Format($"{towerData.Grade}");
         gradeText.transform.rotation = CameraManager.Instance.transform.rotation;
     }

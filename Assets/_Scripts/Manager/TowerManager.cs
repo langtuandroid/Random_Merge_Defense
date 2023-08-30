@@ -139,7 +139,14 @@ public class TowerManager : SingletonComponent<TowerManager>
                 if (Physics.Raycast(ray, out hitSeat, 100, AllLayer.SeatLayer))
                 {
                     SeatTile mergeSeat = hitSeat.transform.GetComponent<SeatTile>();
-                    towerBuildingSystem.DragMerge(mergeSeat, clickedFilledSeat);
+                    if (!towerBuildingSystem.DragMerge(mergeSeat, clickedFilledSeat))
+                    {
+                        TowerController tower1 = mergeSeat.TowerController;
+                        TowerController tower2 = clickedFilledSeat.TowerController;
+                        mergeSeat.ChangeTower(tower2);
+                        clickedFilledSeat.ChangeTower(tower1);
+
+                    }
                 }
             }
             clickType = ClickType.NotThing;
