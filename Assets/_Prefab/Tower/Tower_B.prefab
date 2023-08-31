@@ -364,9 +364,9 @@ MonoBehaviour:
       towerId: 
       upgradeLevel: 0
       value: 0
-      goldIncrease: 0
+      requiredGold: 0
   recycleObject: {fileID: -2541516999898212478}
-  towerAttackSystem: {fileID: 3091748982615348530}
+  towerAttackSystem: {fileID: 1814321202772161234}
   attackRangeVisual: {fileID: 7887719125263432878}
   gradeText: {fileID: 3389721684703377239}
 --- !u!114 &-2541516999898212478
@@ -1059,7 +1059,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6037198215123933148, guid: 2e4a09d793f5814468d34ff7a07433b0, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2e4a09d793f5814468d34ff7a07433b0, type: 3}
 --- !u!4 &1545363247894003573 stripped
 Transform:
@@ -1067,15 +1068,50 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 8728106489834832622}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &3091748982615348530 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6037198215123933148, guid: 2e4a09d793f5814468d34ff7a07433b0,
+--- !u!1 &5160576933419632299 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4521187393372308549, guid: 2e4a09d793f5814468d34ff7a07433b0,
     type: 3}
   m_PrefabInstance: {fileID: 8728106489834832622}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+--- !u!114 &1814321202772161234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5160576933419632299}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58633f74990c9874c93d4d09df93baa3, type: 3}
+  m_Script: {fileID: 11500000, guid: 4dc14d0927049e74183e6dcbde57572a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  towerData:
+    towerId: 
+    grade: 0
+    abilityId: 
+    attackPower: 0
+    attackDistance: 0
+    criticalRate: 0
+    actCoolDown: 0
+    operationTimes: 0
+    operationInterval: 0
+    objectMultiple: 0
+    objectMultipleAngle: 0
+    penetrationCount: 0
+    values: []
+    inGameTowerUpgrade:
+      towerId: 
+      upgradeLevel: 0
+      value: 0
+      requiredGold: 0
+  parentRigid: {fileID: 4312825885316414522}
+  attackDetectCollider: {fileID: 8615850431143499159}
+  enemyControllers: []
+  particleId: CannonBomb_Particle
+--- !u!135 &8615850431143499159 stripped
+SphereCollider:
+  m_CorrespondingSourceObject: {fileID: 1058856955194857337, guid: 2e4a09d793f5814468d34ff7a07433b0,
+    type: 3}
+  m_PrefabInstance: {fileID: 8728106489834832622}
+  m_PrefabAsset: {fileID: 0}

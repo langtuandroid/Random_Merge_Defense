@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: AttackObject
+  m_EditorClassIdentifier: 
+  m_GroupName: AttackObject
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 56edcd5d1b14edc49b2e9057130f966a
+  m_SerializeEntries:
+  - m_GUID: 6ba338aafb6d36c4f8874f6f6316e896
+    m_Address: Tower_B
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - AttackObject
+  - m_GUID: 58f7ebd31e00bfe4196702b36b707acb
+    m_Address: Tower_D
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - AttackObject
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 810047e11ab25e74c8917d7a7d217414, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: cb1b0c4fece45d545abcfb46da2df84d, type: 2}
+    - {fileID: 11400000, guid: eb9506412859b3449a4c1864d5b11df2, type: 2}

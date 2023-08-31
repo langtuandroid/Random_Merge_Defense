@@ -38,7 +38,6 @@ public class RuleTileList3D : MonoBehaviour
             }
             else
             {
-                // tilemapLevels[i].name = "Level (" + i + ")";
                 Grid grid = GetComponent<Grid>();
                 float level_height = i * grid.cellSize.y * grid.transform.localScale.y;
                 tilemapLevels[i].transform.position = new Vector3(0, level_height + startHeight, 0);

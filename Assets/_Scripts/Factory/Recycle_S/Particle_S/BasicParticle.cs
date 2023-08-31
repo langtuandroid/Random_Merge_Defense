@@ -8,7 +8,7 @@ public class BasicParticle : RecycleParticle
     protected new ParticleSystem particleSystem;
     public override void Initialize(System.Action<RecycleObject> _restoreAction)
     {
-        particleSystem = GetComponent<ParticleSystem>();
+        particleSystem = GetComponentInChildren<ParticleSystem>();
         base.Initialize(_restoreAction);
         var main = particleSystem.main;
         main.stopAction = ParticleSystemStopAction.Callback;

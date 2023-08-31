@@ -42,7 +42,6 @@ public class SeatTileList : SingletonComponent<SeatTileList>
 
 
 
-#if UNITY_EDITOR
     public void Setting()
     {
         seatTiles = GetComponentsInChildren<SeatTile>();
@@ -51,5 +50,4 @@ public class SeatTileList : SingletonComponent<SeatTileList>
             seatTiles[i].Setting(i);
         }
     }
-#endif
 }

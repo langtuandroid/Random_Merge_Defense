@@ -24,7 +24,7 @@ public class TowerManager : SingletonComponent<TowerManager>
     TowerController dragingTower;
     bool onDrag;
     Vector3 touchPosition;
-    [SerializeField] float dragCheckDistance = 1;
+    [SerializeField] float dragCheckDistance = 5;
     public void Initialize()
     {
         towerBuildingSystem = GetComponentInChildren<TowerBuildingSystem>();

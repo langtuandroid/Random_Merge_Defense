@@ -45,9 +45,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa7b96d7eace1b04493c64a82aee8571, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goldIncrease: 10
   doubleClickCheckTime: 0.2
   doubleClickTimer: 0
-  doubleClickCheckCount: 0
+  notFilledDoubleClickCheck: 0
+  filledDoubleClickCheck: 0
+  dragCheckDistance: 50
 --- !u!1 &5828443506918902830
 GameObject:
   m_ObjectHideFlags: 0

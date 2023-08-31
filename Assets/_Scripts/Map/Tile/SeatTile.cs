@@ -44,10 +44,8 @@ public class SeatTile : RuleTile3D
 
 
 
-#if UNITY_EDITOR
     public void Setting(int seatId)
     {
         this.seatId = seatId;
     }
-#endif
 }

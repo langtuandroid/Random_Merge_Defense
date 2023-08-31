@@ -309,15 +309,16 @@ MonoBehaviour:
     operationInterval: 0
     objectMultiple: 0
     objectMultipleAngle: 0
+    objectSpeed: 0
     penetrationCount: 0
     values: []
     inGameTowerUpgrade:
       towerId: 
       upgradeLevel: 0
       value: 0
-      goldIncrease: 0
+      requiredGold: 0
   recycleObject: {fileID: -2078986565269682778}
-  towerAttackSystem: {fileID: 2208020129063005163}
+  towerAttackSystem: {fileID: 235241508938976592}
   attackRangeVisual: {fileID: 2101291643782593605}
   gradeText: {fileID: 1465395717175566494}
 --- !u!114 &-2078986565269682778
@@ -1059,23 +1060,59 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6037198215123933148, guid: 2e4a09d793f5814468d34ff7a07433b0, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2e4a09d793f5814468d34ff7a07433b0, type: 3}
---- !u!114 &2208020129063005163 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6037198215123933148, guid: 2e4a09d793f5814468d34ff7a07433b0,
-    type: 3}
-  m_PrefabInstance: {fileID: 5578861876548467767}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58633f74990c9874c93d4d09df93baa3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &2395444848156639660 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7805385991124516251, guid: 2e4a09d793f5814468d34ff7a07433b0,
     type: 3}
   m_PrefabInstance: {fileID: 5578861876548467767}
   m_PrefabAsset: {fileID: 0}
+--- !u!135 &4890286442128124750 stripped
+SphereCollider:
+  m_CorrespondingSourceObject: {fileID: 1058856955194857337, guid: 2e4a09d793f5814468d34ff7a07433b0,
+    type: 3}
+  m_PrefabInstance: {fileID: 5578861876548467767}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8345841547967576178 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4521187393372308549, guid: 2e4a09d793f5814468d34ff7a07433b0,
+    type: 3}
+  m_PrefabInstance: {fileID: 5578861876548467767}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &235241508938976592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8345841547967576178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75a7b8f3a0b947b4cb60ec0f4f713928, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerData:
+    towerId: 
+    grade: 0
+    abilityId: 
+    attackPower: 0
+    attackDistance: 0
+    criticalRate: 0
+    actCoolDown: 0
+    operationTimes: 0
+    operationInterval: 0
+    objectMultiple: 0
+    objectMultipleAngle: 0
+    objectSpeed: 0
+    penetrationCount: 0
+    values: []
+    inGameTowerUpgrade:
+      towerId: 
+      upgradeLevel: 0
+      value: 0
+      requiredGold: 0
+  parentRigid: {fileID: 4494860444644014744}
+  attackDetectCollider: {fileID: 4890286442128124750}
+  enemyControllers: []

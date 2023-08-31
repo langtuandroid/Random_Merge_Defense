@@ -12,7 +12,8 @@ public abstract class TowerAttackSystem : MonoBehaviour
     IEnumerator _attackCo;
     WaitForFixedUpdate waitForFixedUpdate;
     protected System.Action attackAnimation;
-    protected bool critical => towerData.CriticalRate <= Random.value ? true : false;
+    bool critical;
+    protected Vector3 playerRotation;
     public void Initialize(TowerData towerData, System.Action attackAnimation)
     {
         attackDetectCollider.enabled = true;
@@ -52,10 +53,13 @@ public abstract class TowerAttackSystem : MonoBehaviour
         {
             CheckEnemyDeath();
             OrderBy();
+            critical = towerData.CriticalRate <= Random.value ? true : false;
             if (enemyControllers.Count != 0)
             {
                 for (int attackCount = 0; attackCount < towerData.ObjectMultiple; attackCount++)
                 {
+                    SetPlayerRotation();
+                    attackAnimation.Invoke();
                     Attack(attackCount);
                 }
                 yield return new WaitForSeconds(towerData.OperationInterval);
@@ -92,5 +96,22 @@ public abstract class TowerAttackSystem : MonoBehaviour
         parentRigid.transform.localRotation = Quaternion.identity;
         enemyControllers.Clear();
         attackDetectCollider.enabled = false;
+    }
+    void SetPlayerRotation()
+    {
+        playerRotation = enemyControllers[0].Rigidbody.position - parentRigid.position;
+        playerRotation.y = 0;
+        parentRigid.rotation = Quaternion.LookRotation(playerRotation);
+    }
+    protected void Attack(EnemyController enemyController)
+    {
+        if (critical)
+        {
+            enemyController.DamageReceiver.Damage(towerData.CriticalAttackPower, true);
+        }
+        else
+        {
+            enemyController.DamageReceiver.Damage(towerData.AttackPower, false);
+        }
     }
 }

@@ -16,7 +16,6 @@ public class TowerController : MonoBehaviour
     {
         this.towerData = towerData;
         towerAnimationSystem = new TowerAnimationSystem(GetComponent<Animator>());
-
         towerAttackSystem.Initialize(this.towerData, towerAnimationSystem.AttackPlay);
 
         attackRangeVisual.transform.localScale = Vector3.one * towerData.AttackDistance * 2;

@@ -92,6 +92,7 @@ public struct TowerData
     public float OperationInterval => operationInterval;
     public float ObjectMultiple => objectMultiple;
     public float ObjectMultipleAngle => objectMultipleAngle;
+    public float ObjectSpeed => objectSpeed;
     public int PenetrationCount => penetrationCount;
     public float[] Values => values;
 
@@ -106,10 +107,11 @@ public struct TowerData
     [SerializeField] private float operationInterval;
     [SerializeField] private float objectMultiple;
     [SerializeField] private float objectMultipleAngle;
+    [SerializeField] private float objectSpeed;
     [SerializeField] private int penetrationCount;
     [SerializeField] private float[] values;
     [SerializeField] private InGameTowerUpgrade inGameTowerUpgrade;
-    public TowerData(string towerId, int grade, string abilityId, float attackPower, float attackDistance, float criticalRate, float actCoolDown, int operationTimes, float operationInterval, float objectMultiple, float objectMultipleAngle, int penetrationCount, float[] values, InGameTowerUpgrade inGameTowerUpgrade)
+    public TowerData(string towerId, int grade, string abilityId, float attackPower, float attackDistance, float criticalRate, float actCoolDown, int operationTimes, float operationInterval, float objectMultiple, float objectMultipleAngle, float objectSpeed, int penetrationCount, float[] values, InGameTowerUpgrade inGameTowerUpgrade)
     {
         this.towerId = towerId;
         this.grade = grade;
@@ -122,6 +124,7 @@ public struct TowerData
         this.operationInterval = operationInterval;
         this.objectMultiple = objectMultiple;
         this.objectMultipleAngle = objectMultipleAngle;
+        this.objectSpeed = objectSpeed;
         this.penetrationCount = penetrationCount;
         this.values = values;
         this.inGameTowerUpgrade = inGameTowerUpgrade;

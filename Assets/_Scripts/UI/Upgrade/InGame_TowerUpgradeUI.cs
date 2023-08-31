@@ -6,7 +6,7 @@ using UnityEngine;
 public class InGame_TowerUpgradeUI : MonoBehaviour
 {
     [SerializeField] InGame_TowerUpgradeButton upgradeButtonPrefab;
-    [SerializeField] List<InGame_TowerUpgradeButton> upgradeButtons;
+    [SerializeField] List<InGame_TowerUpgradeButton> upgradeButtons = new List<InGame_TowerUpgradeButton>();
     [SerializeField] Transform frame;
     InGameData inGameData;
     int buttonCount;
@@ -20,6 +20,7 @@ public class InGame_TowerUpgradeUI : MonoBehaviour
             upgradeButtons.Add(Instantiate(upgradeButtonPrefab, frame));
             upgradeButtons[i].Initialize(inGameTowerUpgrades[i]);
         }
+        Destroy(upgradeButtonPrefab.gameObject);
         buttonCount = upgradeButtons.Count;
     }
     private void Update()

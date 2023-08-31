@@ -358,15 +358,16 @@ MonoBehaviour:
     operationInterval: 0
     objectMultiple: 0
     objectMultipleAngle: 0
+    objectSpeed: 0
     penetrationCount: 0
     values: []
     inGameTowerUpgrade:
       towerId: 
       upgradeLevel: 0
       value: 0
-      goldIncrease: 0
+      requiredGold: 0
   recycleObject: {fileID: 4643918886161444654}
-  towerAttackSystem: {fileID: 9122168030801581435}
+  towerAttackSystem: {fileID: 5444534615304624536}
   attackRangeVisual: {fileID: 6135694516363340008}
   gradeText: {fileID: 8634359177041521151}
 --- !u!114 &4643918886161444654
@@ -841,26 +842,62 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6037198215123933148, guid: 2e4a09d793f5814468d34ff7a07433b0, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2e4a09d793f5814468d34ff7a07433b0, type: 3}
+--- !u!1 &1436198918208718562 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4521187393372308549, guid: 2e4a09d793f5814468d34ff7a07433b0,
+    type: 3}
+  m_PrefabInstance: {fileID: 3265141291046912679}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5444534615304624536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1436198918208718562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b370ed16355c9d04f9b64e99ce66c6ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerData:
+    towerId: 
+    grade: 0
+    abilityId: 
+    attackPower: 0
+    attackDistance: 0
+    criticalRate: 0
+    actCoolDown: 0
+    operationTimes: 0
+    operationInterval: 0
+    objectMultiple: 0
+    objectMultipleAngle: 0
+    objectSpeed: 0
+    penetrationCount: 0
+    values: []
+    inGameTowerUpgrade:
+      towerId: 
+      upgradeLevel: 0
+      value: 0
+      requiredGold: 0
+  parentRigid: {fileID: 1298950688502091076}
+  attackDetectCollider: {fileID: 2585572502626932190}
+  enemyControllers: []
+--- !u!135 &2585572502626932190 stripped
+SphereCollider:
+  m_CorrespondingSourceObject: {fileID: 1058856955194857337, guid: 2e4a09d793f5814468d34ff7a07433b0,
+    type: 3}
+  m_PrefabInstance: {fileID: 3265141291046912679}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4684396173380206396 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7805385991124516251, guid: 2e4a09d793f5814468d34ff7a07433b0,
     type: 3}
   m_PrefabInstance: {fileID: 3265141291046912679}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &9122168030801581435 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6037198215123933148, guid: 2e4a09d793f5814468d34ff7a07433b0,
-    type: 3}
-  m_PrefabInstance: {fileID: 3265141291046912679}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58633f74990c9874c93d4d09df93baa3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &7089980352802324916
 PrefabInstance:
   m_ObjectHideFlags: 0

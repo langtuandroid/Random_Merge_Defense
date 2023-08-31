@@ -27,6 +27,16 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - RecycleParticle
+  - m_GUID: e8f086f12b2d4864aa7013d8a1d607e1
+    m_Address: CannonBomb_Particle
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - RecycleParticle
+  - m_GUID: cc0257c83231fb54ea45612a61b42c6f
+    m_Address: RangeAttack_Particle
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - RecycleParticle
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 810047e11ab25e74c8917d7a7d217414, type: 2}
   m_SchemaSet:

@@ -7,6 +7,7 @@ public class StageManager : SingletonComponent<StageManager>
     WaveManager waveManager;
     public void Awake()
     {
+        CameraManager.Instance.Initialie();
         waveManager = GetComponentInChildren<WaveManager>();
         var stageData = DataManager.Database.StageDataLayer.GetData();
         if (stageData == null)

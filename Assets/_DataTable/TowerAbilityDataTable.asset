@@ -18,11 +18,12 @@ MonoBehaviour:
     attackPower: 1
     attackDistance: 3
     criticalRate: 0.5
-    actCoolDown: 0.2
+    actCoolDown: 0.5
     operationTimes: 1
     operationInterval: -1
     objectMultiple: 1
     objectMultipleAngle: -1
+    objectSpeed: -1
     penetrationCount: 1
     values:
     - -1
@@ -36,11 +37,12 @@ MonoBehaviour:
     attackPower: 1
     attackDistance: 3
     criticalRate: 0.5
-    actCoolDown: 0.2
+    actCoolDown: 0.5
     operationTimes: 1
     operationInterval: -1
     objectMultiple: 1
     objectMultipleAngle: -1
+    objectSpeed: -1
     penetrationCount: 1
     values:
     - -1
@@ -54,11 +56,12 @@ MonoBehaviour:
     attackPower: 1
     attackDistance: 3
     criticalRate: 0.5
-    actCoolDown: 0.2
+    actCoolDown: 0.5
     operationTimes: 1
     operationInterval: -1
     objectMultiple: 1
     objectMultipleAngle: -1
+    objectSpeed: -1
     penetrationCount: 1
     values:
     - -1
@@ -72,11 +75,12 @@ MonoBehaviour:
     attackPower: 1
     attackDistance: 3
     criticalRate: 0.5
-    actCoolDown: 0.2
+    actCoolDown: 0.5
     operationTimes: 1
     operationInterval: -1
     objectMultiple: 1
     objectMultipleAngle: -1
+    objectSpeed: -1
     penetrationCount: 1
     values:
     - -1
@@ -90,11 +94,12 @@ MonoBehaviour:
     attackPower: 1
     attackDistance: 3
     criticalRate: 0.5
-    actCoolDown: 0.2
+    actCoolDown: 0.5
     operationTimes: 1
     operationInterval: -1
     objectMultiple: 1
     objectMultipleAngle: -1
+    objectSpeed: -1
     penetrationCount: 1
     values:
     - -1
@@ -108,11 +113,12 @@ MonoBehaviour:
     attackPower: 1
     attackDistance: 3
     criticalRate: 0.5
-    actCoolDown: 0.2
+    actCoolDown: 0.5
     operationTimes: 1
     operationInterval: -1
     objectMultiple: 1
     objectMultipleAngle: -1
+    objectSpeed: -1
     penetrationCount: 1
     values:
     - -1
@@ -126,14 +132,15 @@ MonoBehaviour:
     attackPower: 1
     attackDistance: 3
     criticalRate: 0.5
-    actCoolDown: 0.2
+    actCoolDown: 1
     operationTimes: 1
     operationInterval: -1
     objectMultiple: 1
     objectMultipleAngle: -1
+    objectSpeed: 10
     penetrationCount: -1
     values:
-    - -1
+    - 1
     - -1
     - -1
     - -1
@@ -144,14 +151,15 @@ MonoBehaviour:
     attackPower: 1
     attackDistance: 3
     criticalRate: 0.5
-    actCoolDown: 0.2
+    actCoolDown: 1
     operationTimes: 1
     operationInterval: -1
     objectMultiple: 1
     objectMultipleAngle: -1
+    objectSpeed: 10
     penetrationCount: -1
     values:
-    - -1
+    - 1
     - -1
     - -1
     - -1
@@ -162,14 +170,15 @@ MonoBehaviour:
     attackPower: 1
     attackDistance: 3
     criticalRate: 0.5
-    actCoolDown: 0.2
+    actCoolDown: 1
     operationTimes: 1
     operationInterval: -1
     objectMultiple: 1
-    objectMultipleAngle: 45
+    objectMultipleAngle: -1
+    objectSpeed: 10
     penetrationCount: -1
     values:
-    - -1
+    - 1
     - -1
     - -1
     - -1
@@ -180,14 +189,15 @@ MonoBehaviour:
     attackPower: 1
     attackDistance: 3
     criticalRate: 0.5
-    actCoolDown: 0.2
+    actCoolDown: 1
     operationTimes: 1
     operationInterval: -1
     objectMultiple: 1
-    objectMultipleAngle: 45
+    objectMultipleAngle: -1
+    objectSpeed: 10
     penetrationCount: -1
     values:
-    - -1
+    - 1
     - -1
     - -1
     - -1
@@ -198,14 +208,15 @@ MonoBehaviour:
     attackPower: 1
     attackDistance: 3
     criticalRate: 0.5
-    actCoolDown: 0.2
+    actCoolDown: 1
     operationTimes: 1
     operationInterval: -1
     objectMultiple: 1
-    objectMultipleAngle: 45
+    objectMultipleAngle: -1
+    objectSpeed: 10
     penetrationCount: -1
     values:
-    - -1
+    - 1
     - -1
     - -1
     - -1
@@ -216,14 +227,15 @@ MonoBehaviour:
     attackPower: 1
     attackDistance: 3
     criticalRate: 0.5
-    actCoolDown: 0.2
+    actCoolDown: 1
     operationTimes: 1
     operationInterval: -1
     objectMultiple: 1
-    objectMultipleAngle: 45
+    objectMultipleAngle: -1
+    objectSpeed: 10
     penetrationCount: -1
     values:
-    - -1
+    - 1
     - -1
     - -1
     - -1
@@ -234,11 +246,12 @@ MonoBehaviour:
     attackPower: 1
     attackDistance: 3
     criticalRate: 0.5
-    actCoolDown: 0.2
+    actCoolDown: 1
     operationTimes: 1
     operationInterval: -1
     objectMultiple: 1
     objectMultipleAngle: -1
+    objectSpeed: 2
     penetrationCount: -1
     values:
     - -1
@@ -252,11 +265,12 @@ MonoBehaviour:
     attackPower: 1
     attackDistance: 3
     criticalRate: 0.5
-    actCoolDown: 0.2
+    actCoolDown: 1
     operationTimes: 1
     operationInterval: -1
     objectMultiple: 1
     objectMultipleAngle: -1
+    objectSpeed: 2
     penetrationCount: -1
     values:
     - -1
@@ -270,11 +284,12 @@ MonoBehaviour:
     attackPower: 1
     attackDistance: 3
     criticalRate: 0.5
-    actCoolDown: 0.2
+    actCoolDown: 1
     operationTimes: 1
     operationInterval: -1
     objectMultiple: 1
     objectMultipleAngle: -1
+    objectSpeed: 2
     penetrationCount: -1
     values:
     - -1
@@ -288,11 +303,12 @@ MonoBehaviour:
     attackPower: 1
     attackDistance: 3
     criticalRate: 0.5
-    actCoolDown: 0.2
+    actCoolDown: 1
     operationTimes: 1
     operationInterval: -1
     objectMultiple: 1
     objectMultipleAngle: -1
+    objectSpeed: 2
     penetrationCount: -1
     values:
     - -1
@@ -306,11 +322,12 @@ MonoBehaviour:
     attackPower: 1
     attackDistance: 3
     criticalRate: 0.5
-    actCoolDown: 0.2
+    actCoolDown: 1
     operationTimes: 1
     operationInterval: -1
     objectMultiple: 1
     objectMultipleAngle: -1
+    objectSpeed: 2
     penetrationCount: -1
     values:
     - -1
@@ -324,11 +341,12 @@ MonoBehaviour:
     attackPower: 1
     attackDistance: 3
     criticalRate: 0.5
-    actCoolDown: 0.2
+    actCoolDown: 1
     operationTimes: 1
     operationInterval: -1
     objectMultiple: 1
     objectMultipleAngle: -1
+    objectSpeed: 2
     penetrationCount: -1
     values:
     - -1
@@ -342,14 +360,15 @@ MonoBehaviour:
     attackPower: 1
     attackDistance: 3
     criticalRate: 0.5
-    actCoolDown: 0.2
+    actCoolDown: 0.5
     operationTimes: 1
     operationInterval: -1
     objectMultiple: 1
     objectMultipleAngle: -1
+    objectSpeed: 10
     penetrationCount: -1
     values:
-    - -1
+    - 5
     - -1
     - -1
     - -1
@@ -360,14 +379,15 @@ MonoBehaviour:
     attackPower: 1
     attackDistance: 3
     criticalRate: 0.5
-    actCoolDown: 0.2
+    actCoolDown: 0.5
     operationTimes: 1
     operationInterval: -1
     objectMultiple: 1
     objectMultipleAngle: -1
+    objectSpeed: 10
     penetrationCount: -1
     values:
-    - -1
+    - 5
     - -1
     - -1
     - -1
@@ -378,14 +398,15 @@ MonoBehaviour:
     attackPower: 1
     attackDistance: 3
     criticalRate: 0.5
-    actCoolDown: 0.2
+    actCoolDown: 0.5
     operationTimes: 1
     operationInterval: -1
     objectMultiple: 1
     objectMultipleAngle: -1
+    objectSpeed: 10
     penetrationCount: -1
     values:
-    - -1
+    - 5
     - -1
     - -1
     - -1
@@ -396,14 +417,15 @@ MonoBehaviour:
     attackPower: 1
     attackDistance: 3
     criticalRate: 0.5
-    actCoolDown: 0.2
+    actCoolDown: 0.5
     operationTimes: 1
     operationInterval: -1
     objectMultiple: 1
     objectMultipleAngle: -1
+    objectSpeed: 10
     penetrationCount: -1
     values:
-    - -1
+    - 5
     - -1
     - -1
     - -1
@@ -414,14 +436,15 @@ MonoBehaviour:
     attackPower: 1
     attackDistance: 3
     criticalRate: 0.5
-    actCoolDown: 0.2
+    actCoolDown: 0.5
     operationTimes: 1
     operationInterval: -1
     objectMultiple: 1
     objectMultipleAngle: -1
+    objectSpeed: 10
     penetrationCount: -1
     values:
-    - -1
+    - 5
     - -1
     - -1
     - -1
@@ -432,14 +455,15 @@ MonoBehaviour:
     attackPower: 1
     attackDistance: 3
     criticalRate: 0.5
-    actCoolDown: 0.2
+    actCoolDown: 0.5
     operationTimes: 1
     operationInterval: -1
     objectMultiple: 1
     objectMultipleAngle: -1
+    objectSpeed: 10
     penetrationCount: -1
     values:
-    - -1
+    - 5
     - -1
     - -1
     - -1
@@ -455,6 +479,7 @@ MonoBehaviour:
     operationInterval: -1
     objectMultiple: 1
     objectMultipleAngle: -1
+    objectSpeed: 2
     penetrationCount: -1
     values:
     - -1
@@ -473,6 +498,7 @@ MonoBehaviour:
     operationInterval: -1
     objectMultiple: 1
     objectMultipleAngle: -1
+    objectSpeed: 2
     penetrationCount: -1
     values:
     - -1
@@ -491,6 +517,7 @@ MonoBehaviour:
     operationInterval: -1
     objectMultiple: 1
     objectMultipleAngle: -1
+    objectSpeed: 2
     penetrationCount: -1
     values:
     - -1
@@ -509,6 +536,7 @@ MonoBehaviour:
     operationInterval: -1
     objectMultiple: 1
     objectMultipleAngle: -1
+    objectSpeed: 2
     penetrationCount: -1
     values:
     - -1
@@ -527,6 +555,7 @@ MonoBehaviour:
     operationInterval: -1
     objectMultiple: 1
     objectMultipleAngle: -1
+    objectSpeed: 2
     penetrationCount: -1
     values:
     - -1
@@ -545,6 +574,7 @@ MonoBehaviour:
     operationInterval: -1
     objectMultiple: 1
     objectMultipleAngle: -1
+    objectSpeed: 2
     penetrationCount: -1
     values:
     - -1

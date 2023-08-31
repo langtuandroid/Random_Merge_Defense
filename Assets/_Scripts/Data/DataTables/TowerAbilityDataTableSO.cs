@@ -18,6 +18,7 @@ public struct TowerAbilityDataTable
     public float operationInterval;
     public int objectMultiple;
     public float objectMultipleAngle;
+    public float objectSpeed;
     public int penetrationCount;
     public float[] values;
 
